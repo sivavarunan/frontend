@@ -1,0 +1,176 @@
+
+body{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    min-height: 100vh;
+    /* place-items: center; */
+    /* min-width: 320px; */
+    background: linear-gradient(145deg, #665b5b, #292c37);
+    /* no-repeat; */
+    /* background-size: cover; */
+    /* background-position: center; */
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    overflow: hidden;
+    
+}
+
+.wrapper {
+
+    width: 400px;
+    height: auto;
+    background: rgba(109, 107, 107, 0.508);
+    border: 2px solid rgba(255,255,255, .2);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px rgba(0, 0, 0,.2);
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 95px;
+    margin-bottom: 20px;
+    }
+
+    .text {
+        background: linear-gradient(130deg, #959496 40%, #706b6c 60%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .wrapper h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+    .wrapper p {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .wrapper .input-box {
+        position: relative;
+        width: 95%;
+        height: 100%;
+        margin: 30px 0;
+    }
+    
+    .input-box input {
+        width: 106%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        border: 2px solid rgba(255,255,255, .2);
+        border-radius: 40px;
+        padding: 20px 45px 20px 20px;
+        
+    }
+    
+    .input-box input::placeholder{
+        color: #fff;
+    }
+    
+    
+    .input-box .icon{
+    position: absolute;
+    right: 20px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    }
+    
+    .wrapper .remember-forgot {
+        display: flex;
+        justify-content: space-between;
+        font-size:14.5px ;
+        margin: -15px 0 15px;
+    }
+    
+    .remember-forgot label input{
+        accent-color: #fff;
+        text-decoration: none;
+    }
+    
+    .remember-forgot a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .remember-forgot a:hover{
+        text-decoration: underline;
+    }
+  
+    .wrapper button{
+        width: 100%;
+        height: 45px;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        box-shadow: 0 0 10px rgba(0,0,0, .1);
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 700;
+
+        border: 5em;
+        -webkit-transform: translate(0);
+        transform: translate(0);
+        background-image: linear-gradient(45deg, #363535, #545454);
+        padding: 0.7em 2em;
+        border-radius: 65px;
+        box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+        -webkit-transition: box-shadow 0.25s;
+        transition: box-shadow 0.25s;
+        color: rgb(240, 237, 237);
+    }
+
+    .wrapper button .text {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+    }
+    
+    .wrapper button:after {
+        content: "";
+        border-radius: 18px;
+        position: absolute;
+        margin: 4px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background: #767676;
+    }
+    
+    .wrapper button:hover {
+        background-image: linear-gradient(-45deg, #212123, #2f2e2f);
+        box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+    }
+
+    .wrapper button:hover .text {
+        background-image: linear-gradient(-45deg, #d7d8da, #565256);
+      }
+    
+    button.gray{
+        background: #d5d2d2;
+        color: #212121;
+    }
+
+    .wrapper .google-login-button {
+        color: rgb(84, 84, 84);
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      .wrapper .google-login-button:hover {
+        background-color: #515050;
+      } 
+
+      .wrapper .google-login-button span {
+        font-size: large;
+        color: #ffffff;
+      }
