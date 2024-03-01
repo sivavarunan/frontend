@@ -30,7 +30,7 @@ body{
     padding: 30px 40px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 95px;
+    margin-top: 75px;
     margin-bottom: 20px;
     }
 
@@ -174,3 +174,13 @@ body{
         font-size: large;
         color: #ffffff;
       }
+      .errorh{  
+        background: linear-gradient(130deg, #f10e0e 40%, #ec264d 60%);
+        border: none;
+        border-radius: 18px;
+        padding: 2px 2px 2px 2px;
+        text-align: center;
+    }
+    .iconx{
+        transform: translateY(12%);
+    }

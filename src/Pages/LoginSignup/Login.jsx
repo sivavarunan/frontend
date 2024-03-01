@@ -3,28 +3,48 @@ import { GiPadlock } from "react-icons/gi";
 import { MdEmail } from "react-icons/md";
 import Divider from "./Divider";
 import api from "../../api/api"; // Import the api.js file
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from 'react-router-dom';
+import Home from "../Home/Home";
 
 const Login = ({ onSignupClick }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
 
   const handleLogin = async (e) => {
     e.preventDefault(); // Prevent the form from submitting automatically
 
-    // Perform login authentication here, you can use API calls similar to the signup component
-    try {
+    try {     
       console.log(email, password);
+
+      if (!email || !password) {
+        toast.error("All fields are required");
+        return;
+      }
+
       const responseData = await api.login(email, password);
-      console.log(responseData); // Output the response data
+      // console.log(responseData); // Output the response data
+      console.log(responseData?.message); // Output the response data
+      if(responseData?.message !== `Request failed with status code 401`){
+        toast.success(`Login Success!!`)
+        navigate('/');
+      }
+
       // Optionally, you can redirect the user to the login page upon successful signup
-      onLoginClick(); 
+      // onLoginClick(); 
       // Assuming `onLoginClick` is a function passed from the parent component to switch to the login view
 
       // Clear the form fields after logging
       setEmail("");
       setPassword("");
+
     } catch (error) {
       console.error("Error logging up:", error);
+      if (error.response?.data?.message){
+        toast.error(error.response?.data?.message)
+      }
       // Handle signup error, display error message, etc.
     }
   };

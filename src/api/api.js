@@ -29,7 +29,7 @@ const api = {
     }
   },
 
-  // Add more API calls as needed...
+
 };
 
 export default api;
