@@ -1,0 +1,12 @@
+/* src/components/Home.css */
+.homepage {
+    text-align: center;
+    padding: 100px;
+  }
+  
+  .homepage img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+  

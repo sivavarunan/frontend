@@ -6,12 +6,17 @@ import api from "../../api/api"; // Import the api.js file
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from 'react-router-dom';
-import Home from "../Home/Home";
+
 
 const Login = ({ onSignupClick }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  const getTokenFromLocalStorage = () => {
+    return localStorage.getItem('token');
+  };
+
 
   const handleLogin = async (e) => {
     e.preventDefault(); // Prevent the form from submitting automatically
@@ -28,6 +33,7 @@ const Login = ({ onSignupClick }) => {
       // console.log(responseData); // Output the response data
       console.log(responseData?.message); // Output the response data
       if(responseData?.message !== `Request failed with status code 401`){
+        localStorage.setItem('token', responseData.token); // Save token to local storage
         toast.success(`Login Success!!`)
         navigate('/');
       }
@@ -56,20 +62,20 @@ const Login = ({ onSignupClick }) => {
         <input
           type="email"
           placeholder="Email"
-          required
+          // required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-        />
+        /><label class ="xy">E-mail</label>
         <MdEmail className="icon" />
       </div>
       <div className="input-box">
         <input
           type="password"
           placeholder="Password"
-          required
+          // required
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-        />
+        /><label class ="xy">Password</label>
         <GiPadlock className="icon" />
       </div>
       <div className="remember-forgot">

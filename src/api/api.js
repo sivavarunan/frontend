@@ -16,7 +16,7 @@ const api = {
       return response.data;
     } catch (error) {
       return error;
-      console.log(error)
+     
     }
   },
 

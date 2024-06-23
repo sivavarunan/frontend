@@ -73,6 +73,9 @@ const Signup = ({ onLoginClick }) => {
 
     } catch (error) {
       console.error("Error signing up:", error);
+      if (error.response?.data?.message){
+        toast.error(error.response?.data?.message)
+      }
       // Handle signup error, display error message, etc.
     }
 
@@ -82,6 +85,8 @@ const Signup = ({ onLoginClick }) => {
     // Regular expression for email validation
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
+    
+
   };
 
   return (
@@ -89,18 +94,21 @@ const Signup = ({ onLoginClick }) => {
       <h1 className="text">Sign Up</h1>
       <div className="input-box">
         <input type="text" placeholder="Username" required onChange={e => setUsername(e.target.value)} />
+        <label class ="xy">Username</label>
         <FaUserCircle className="icon" />
       </div>
       {usernameError && (
       <div className="errorh"><MdDangerous className="iconx"/> Username alredy exists</div>)}
       <div className="input-box">
         <input type="email" placeholder="Email" required onChange={e => setEmail(e.target.value)} />
+        <label class ="xy">E-mail</label>
         <MdEmail className="icon" />
       </div>
       {gmailError && <div className="errorh"><MdDangerous className="iconx" /> Email already exists</div>}
-      {emailError && <div className="errorh"><MdDangerous className="iconx"/> Invalid email address</div>}
+      {/* {emailError && <div className="errorh"><MdDangerous className="iconx"/> Invalid email address</div>} */}
       <div className="input-box">
         <input type="password" placeholder="Password" required onChange={(e) => setPassword(e.target.value)} />
+        <label class ="xy">Password</label>
         <GiPadlock className="icon" />
       </div>
       
