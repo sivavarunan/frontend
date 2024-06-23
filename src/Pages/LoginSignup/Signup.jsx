@@ -8,6 +8,7 @@ import { AxiosError } from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { MdDangerous } from "react-icons/md";
+import PasswordInput from "./PasswordInput";
 
 
 
@@ -20,6 +21,12 @@ const Signup = ({ onLoginClick }) => {
   const[usernameError, setUsernameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
   const [emailError, setEmailError] = useState(false);
+
+  const handleChange = (event) => {
+    if (event && event.target && event.target.value) {
+      setPassword(event.target.value);
+    }
+  };
 
   const handleSignup = async (e) => {
     e.preventDefault(); // Prevent the form from submitting automatically
@@ -88,7 +95,7 @@ const Signup = ({ onLoginClick }) => {
     
 
   };
-
+ 
   return (
     <form>
       <h1 className="text">Sign Up</h1>
@@ -106,14 +113,19 @@ const Signup = ({ onLoginClick }) => {
       </div>
       {gmailError && <div className="errorh"><MdDangerous className="iconx" /> Email already exists</div>}
       {/* {emailError && <div className="errorh"><MdDangerous className="iconx"/> Invalid email address</div>} */}
-      <div className="input-box">
-        <input type="password" placeholder="Password" required onChange={(e) => setPassword(e.target.value)} />
-        <label class ="xy">Password</label>
+      <div className="box">
+        {/* <input type="password" placeholder="Password" required onChange={(e) => setPassword(e.target.value)} /> */}
+        
+        <PasswordInput placeholder="Password" onChange={setPassword} />
         <GiPadlock className="icon" />
+        {/* <label class ="xy">Password</label> */}
+        
       </div>
       
+      {/* <PasswordStrength placeholder="Password" onChange={handleChange} /> */}
       <div>
         <button type="button" className="submit gray" onClick={handleSignup}>
+          
           Sign up
         </button>
         <Divider />

@@ -15,9 +15,8 @@ const api = {
       console.log('response::', response);
       return response.data;
     } catch (error) {
-      return error;
-     
-    }
+            throw error;
+          }
   },
 
   login: async (email, password) => {
@@ -28,7 +27,6 @@ const api = {
       throw error;
     }
   },
-
 
 };
 

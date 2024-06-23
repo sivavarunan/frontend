@@ -8,7 +8,7 @@
 }
 
 body{
-    /* background: #3b3d43; */
+    background: #3b3d43;
 }
 
 button{
@@ -111,8 +111,16 @@ body.open .navbar-menu{
 .login-style {
     color: #707070;
     text-decoration: none;
-    padding: 25px;
+    padding: 10px 16px;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    transition: all 0.3s;
 }
+.login-style:hover {
+    background-color: #707070;
+    color: #fff;
+}
+
 
 @media only screen and (min-width: 600px){
   .navbar{

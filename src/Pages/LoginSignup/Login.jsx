@@ -13,9 +13,12 @@ const Login = ({ onSignupClick }) => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const getTokenFromLocalStorage = () => {
-    return localStorage.getItem('token');
-  };
+
+  // const getTokenFromLocalStorage = () => {
+  //   return localStorage.getItem('token');
+  // };
+
+
 
 
   const handleLogin = async (e) => {
@@ -33,7 +36,9 @@ const Login = ({ onSignupClick }) => {
       // console.log(responseData); // Output the response data
       console.log(responseData?.message); // Output the response data
       if(responseData?.message !== `Request failed with status code 401`){
-        localStorage.setItem('token', responseData.token); // Save token to local storage
+
+        localStorage.setItem('token', responseData.accessToken); // Save token to local storage
+
         toast.success(`Login Success!!`)
         navigate('/');
       }
