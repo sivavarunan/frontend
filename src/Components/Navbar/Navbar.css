@@ -17,7 +17,7 @@ button{
     cursor: pointer;
 }
 
-.navbar{
+/* .navbar{
     position: fixed;
     z-index: 1;
     top: 0;
@@ -30,9 +30,9 @@ button{
     background: #19191c;
     color: #f9f9f9;
     font-family: 'Poppins';
-}
+} */
 
-.navbar-overlay{
+/* .navbar-overlay{
     position: fixed;
     z-index: 2;
     top: 0;
@@ -43,14 +43,14 @@ button{
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;
-}
+} */
 
-body.open .navbar-overlay{
+/* body.open .navbar-overlay{
     visibility: visible;
     opacity: 1;
-}
+} */
 
-.navbar-burger{
+/* .navbar-burger{
     position: absolute;
     top: 0;
     left: 0;
@@ -59,36 +59,36 @@ body.open .navbar-overlay{
     width: 64px;
     height: 64px;
     padding: 0;
-}
+} */
 
 
 .navbar-menu{
     position: absolute;
-    z-index: 3;
+    /* z-index: 3; */
     top: 0px;
-    right: 10px;
-    translate: -100% 0;
-    width: 270px;
-    height: 100%;
+    right: 30px;
+    /* translate: -100% 0; */
+    /* width: 270px; */
+    /* height: 100%; */
     padding: 20px;
-    display: flex;
-    gap: 8px;
-    flex-direction: column;
-    align-items: flex-start;
-    background: #000;
-    visibility: hidden;
-    transition: all 0.3s;
+    /* display: flex; */
+    /* gap: 8px; */
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    /* background: #000; */
+    /* visibility: hidden; */
+    /* transition: all 0.3s; */
 }
 
-body.open .navbar-menu{
+/* body.open .navbar-menu{
     translate: 0 0;
     visibility: visible;
-}
+} */
 
 .navbar-menu > button{
     color: rgba(255,255,255,0.5);
     background: transparent;
-    padding: 0 8px;
+    padding: 0 18px;
     transition: all 0.3s;
 }
 
@@ -97,7 +97,7 @@ body.open .navbar-menu{
 }
 
 .navbar-menu > button.active:hover{
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(253, 26, 26, 0.75);
 }
 
 .link-style {
@@ -113,6 +113,7 @@ body.open .navbar-menu{
     border-radius: 10px;
     transition: all 0.3s;
 }
+
 .login-style:hover {
     background-color: #707070;
     color: #fff;
@@ -131,7 +132,7 @@ body.open .navbar-menu{
       display: none;
   }
   .navbar-menu{
-      position: absolute; /* Change from static */
+      position: absolute; 
       translate: 0 0;
       width: auto;
       background: transparent;

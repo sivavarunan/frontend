@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { Link, useLocation } from 'react-router-dom';
-import Popup from '../../Pages/LoginSignup/popup';
+// import Popup from '../../Pages/LoginSignup/popup';
 import Panel from '../../Pages/LoginSignup/Panel';
 
 const Navbar = () => {
@@ -28,11 +28,11 @@ const Navbar = () => {
                 <span className="material-icons">menu</span>
             </button>
 
-            <h1 className={menu === "home" ? "active" : ""} onClick={() => setMenu("home")}>
-                <Link to='/' className="link-style">MATRIX</Link>
+            <h1 className="navbar-title">
+                <Link to='/' className="link-style">PROJECT</Link>
             </h1>
 
-            <nav className="navbar-menu">
+            <nav className={`navbar-menu ${menu}`}>
                 <button className={menu === "community" ? "active" : ""} onClick={() => setMenu("community")}>
                     <Link to='/community' className="link-style">Community</Link>
                 </button>
@@ -42,15 +42,13 @@ const Navbar = () => {
                 <button className={menu === "store" ? "active" : ""} onClick={() => setMenu("store")}>
                     <Link to='/store' className="link-style">Store</Link>
                 </button>
-
                 {isLoggedIn ? (
-                    <Panel />
+                    <button> <Panel />
+                </button>
                 ) : (
-                    <div className="nav-login">
-                        <Link to='/loginsignup' className="login-style">
-                            <button>Login</button>
-                        </Link>
-                    </div>
+                        <button className={menu === "loginsignup" ? "active" : "loginsignup"} onClick={() => setMenu("loginsignup")}>
+                            <Link to='/loginsignup' className="login-style">Login
+                            </Link></button>
                 )}
             </nav>
         </div>

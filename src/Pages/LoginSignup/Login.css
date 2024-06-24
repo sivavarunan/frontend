@@ -507,8 +507,8 @@ button.gray {
 
 .panel .toggle-button {
   position: fixed;
-  top: 17px;
-  right: -3px;
+  top: 20px;
+  right: 21px;
   background: none;
   border: none;
   padding: 0;
