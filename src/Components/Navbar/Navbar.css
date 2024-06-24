@@ -3,13 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:');
 
 
-*{
+body{
     box-sizing: border-box;
 }
 
-body{
-    background: #3b3d43;
-}
 
 button{
     border: 0;
