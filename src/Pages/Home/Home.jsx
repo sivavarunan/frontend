@@ -1,9 +1,11 @@
 import React from 'react'
 import Card from './card';
+import tree from './tree.jpg'
 
 const Home = () => {
 
   const images = [
+      tree,
     'https://via.placeholder.com/400x200?text=Image+1',
     'https://via.placeholder.com/400x200?text=Image+2',
     'https://via.placeholder.com/400x200?text=Image+3',
