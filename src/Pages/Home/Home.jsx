@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './card';
+import Parbg from './parallex';
 import tree from './tree.jpg'
 
 const Home = () => {
@@ -18,10 +19,10 @@ const Home = () => {
         description="This is a sample card component with a sliding image carousel."
         images={images}
       />
-      
+      <Parbg />
     </div>
     
-    
+  
   )
 }
 

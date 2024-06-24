@@ -1,4 +1,5 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import './parallex.css'
 
 function Parbg() {
   return (
@@ -32,7 +33,7 @@ function Parbg() {
         <div class="animation_layer parallax" id="jungle5"></div>
       </ParallaxLayer>
       <ParallaxLayer offset={1} speed={0.25}>
-        <TextBlock />
+        {/* <TextBlock /> */}
       </ParallaxLayer>
     </Parallax>
   </div>
