@@ -19,7 +19,7 @@ const Home = () => {
         description="This is a sample card component with a sliding image carousel."
         images={images}
       />
-      <Parbg />
+      {/* <Parbg /> */}
     </div>
     
   
