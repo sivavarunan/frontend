@@ -1,9 +1,11 @@
 import React from 'react';
 import Card from './card';
 import HeroImage from './hero.png';
+import HeroImage1 from './hero1.png';
 import tree from './tree.jpg';
 import river from './river.jpg';
 import './Home.css';
+import { FaCogs, FaUsers, FaMobile } from 'react-icons/fa';
 
 const Home = () => {
   const images = [tree, river];
@@ -37,6 +39,30 @@ const Home = () => {
           description="This is the third card."
           images={images}
         />
+      </div>
+
+      {/* Second Hero Section */}
+      <div className="hero-section2">
+        <img src={HeroImage1} alt="Hero" className="hero-image" />
+      </div>
+
+      {/* Feature Section */}
+      <div className="feature-section">
+        <div className="feature">
+          <FaCogs size={36} />
+          <h3>Customizable</h3>
+          <p>Customize your experience with ease.</p>
+        </div>
+        <div className="feature">
+          <FaUsers size={36} />
+          <h3>Community</h3>
+          <p>Join a vibrant community of users.</p>
+        </div>
+        <div className="feature">
+          <FaMobile size={36} />
+          <h3>Responsive</h3>
+          <p>Works seamlessly on all devices.</p>
+        </div>
       </div>
     </div>
   );
