@@ -1,0 +1,77 @@
+
+.panel {
+    position:relative;
+    top: 64px;
+    /* right: 20px; */
+    /* width: 250px; */
+    height: 200px;
+    transition: right 0.3s ease;
+    z-index: 999;
+    background: rgba(207, 200, 200, 0.277);
+    box-shadow: 0 0 10px rgba(206, 206, 206, 0.411);
+    border-radius: 2px;
+    visibility: hidden;
+    opacity: 0;
+    
+  }
+  
+  .panel.open {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .panel .content {
+    padding: 20px;
+    color: #151414;
+
+  }
+  
+  .panel .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .panel .close svg {
+    color: #333;
+  }
+  
+  .panel .close:hover svg {
+    color: #eb7a7ad5;
+  }
+  
+  .panel .toggle-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .panel .toggle-button:focus {
+    transform: scale(1.1);
+  }
+  
+  .panel .logout-button {
+    background-color: #e78369;
+    color: rgb(50, 48, 48);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 16px;
+    margin-top: 20px;
+  }
+  
+  .panel .logout-button:hover {
+    background-color: #e53935;
+  }
+  
+  /* Ensure the panel button is part of the navbar */
+  .navbar .panel-toggle {
+    position: relative;
+    right: 20px;
+    top: 0;
+  }

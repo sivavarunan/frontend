@@ -30,7 +30,7 @@ const Navbar = () => {
             {/* </button> */}
 
             <h1 className="navbar-title">
-                <Link to='/' className="link-style">PROJECT</Link>
+                <Link to='/' className="link-style" onClick={() => setMenu("Home")}>PROJECT</Link>
             </h1>
 
             <nav className={`navbar-menu ${menu}`}>
@@ -48,7 +48,7 @@ const Navbar = () => {
                 </button>
                 ) : (
                         <button className={menu === "loginsignup" ? "active" : "loginsignup"} onClick={() => setMenu("loginsignup")}>
-                            <Link to='/loginsignup' className="login-style">Login
+                            <Link to='/loginsignup' className="link-style">Login
                             </Link></button>
                 )}
             </nav>

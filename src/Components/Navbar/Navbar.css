@@ -13,7 +13,6 @@ button {
     font-family: inherit;
     background: transparent;
     color: inherit;
-    cursor: pointer;
 }
 
 .navbar {
@@ -25,10 +24,9 @@ button {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background: #19191c9a;
+    background: #1a1a1ab0;
     color: #f9f9f9;
     font-family: 'Poppins';
-    /* padding: 16px 0; */
 }
 
 .navbar-title {
@@ -38,43 +36,38 @@ button {
 .navbar-menu {
     display: flex;
     justify-content: center;
-    /* gap: 10px; */
-    padding: 10px 0;
+    gap: 15px;
+    padding: 9px 0;
 }
 
 .navbar-menu > button {
-    color: rgba(255, 255, 255, 0.5);
-    background: transparent;
-    padding: 0 18px;
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 9px;
     transition: all 0.3s;
+    border-radius: 10px;
+}
+
+.navbar-menu > button:hover {
+     color: rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: #707070;
 }
 
 .navbar-menu > button.active {
-    color: inherit;
+    color: #fff; 
+    background-color: rgba(191, 191, 191, 0.368);
 }
 
-.navbar-menu > button.active:hover {
-    color: rgba(253, 26, 26, 0.75);
-}
 
 .link-style {
     color: #f0f0f0;
     text-decoration: none;
-}
-
-.login-style {
-    color: #707070;
-    text-decoration: none;
-    padding: 10px 16px;
-    border: 1px solid #707070;
-    border-radius: 10px;
+    padding: 20px;
     transition: all 0.3s;
+    border-radius: 10px;
 }
 
-.login-style:hover {
-    background-color: #707070;
-    color: #fff;
-}
 
 @media only screen and (min-width: 600px) {
     .navbar {

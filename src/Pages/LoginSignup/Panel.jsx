@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Login.css';
+import './panal.css';
 import { ImProfile } from "react-icons/im"; 
 import { IoMdClose } from "react-icons/io";
 import 'react-toastify/dist/ReactToastify.css';
