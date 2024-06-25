@@ -43,6 +43,9 @@ const Navbar = () => {
                 <button className={menu === "store" ? "active" : ""} onClick={() => setMenu("store")}>
                     <Link to='/store' className="link-style">Store</Link>
                 </button>
+                <button className={menu === "About" ? "active" : ""} onClick={() => setMenu("About")}>
+                    <Link to='/About' className="link-style">About me</Link>
+                </button>
                 {isLoggedIn ? (
                     <button> <Panel />
                 </button>
