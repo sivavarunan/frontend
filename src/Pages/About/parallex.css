@@ -63,11 +63,11 @@
       position: fixed;
   }
   
-  /* #artback {
+  #artback {
     background-image: url(./images/background.png);
-  }
+   }
   
-  #mountain {
+   #mountain {
     background-image: url(./images/mountains.png);
   }
   
@@ -97,4 +97,4 @@
   
   #manonmountain {
     background-image: url(./images/man_on_mountain.png);
-  } */
+  }

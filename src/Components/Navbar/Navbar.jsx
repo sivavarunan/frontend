@@ -20,7 +20,6 @@ const Navbar = () => {
     if (isLoginPage) {
         return null;
     }
-
     return (
         <div className={`navbar ${menu}`}>
             
@@ -43,8 +42,8 @@ const Navbar = () => {
                 <button className={menu === "store" ? "active" : ""} onClick={() => setMenu("store")}>
                     <Link to='/store' className="link-style">Store</Link>
                 </button>
-                <button className={menu === "About" ? "active" : ""} onClick={() => setMenu("About")}>
-                    <Link to='/About' className="link-style">About me</Link>
+                <button className={menu === "about" ? "active" : ""} onClick={() => setMenu("about")}>
+                    <Link to='/about' className="link-style">About</Link>
                 </button>
                 {isLoggedIn ? (
                     <button> <Panel />
