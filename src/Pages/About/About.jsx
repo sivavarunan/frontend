@@ -8,7 +8,7 @@ const About = () => {
         <div>
             <h1>About</h1>
             <p>This is the About page content.</p>
-            <Parbg /> {/* Render the Parbg component here */}
+            {/* <Parbg />  */}
         </div>
     );
 }
