@@ -1,6 +1,5 @@
 import React from 'react';
 import Parbg from './parallex';
-
 // import './parallex.css';
 
 const About = () => {

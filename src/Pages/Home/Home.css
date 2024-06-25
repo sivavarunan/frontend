@@ -1,0 +1,44 @@
+.hero-section {
+    text-align: center;
+  }
+  
+  .hero-image {
+    /* max-width: 100%; */
+  }
+  
+  .hero-content {
+    margin-top: 20px;
+  }
+  
+  .sbutton {
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    background-color: aliceblue;
+    border: 1px solid beige;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .sbutton:hover {
+    color: blueviolet;
+    background-color: blanchedalmond;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .card {
+    flex: 1 1 300px; /* Adjust width as needed */
+    margin: 10px;
+    /* padding: 20px; */
+    /* background-color: #fff; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
