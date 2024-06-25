@@ -1,9 +1,13 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+
+src/Pages/Home/videoes/animation.mp4
+
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
+
 
 # testing
 /coverage

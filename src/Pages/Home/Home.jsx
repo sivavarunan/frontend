@@ -6,6 +6,7 @@ import tree from './tree.jpg';
 import river from './river.jpg';
 import './Home.css';
 import { FaCogs, FaUsers, FaMobile } from 'react-icons/fa';
+import VideoSection from './VideoSection';
 
 const Home = () => {
   const images = [tree, river];
@@ -40,11 +41,12 @@ const Home = () => {
           images={images}
         />
       </div>
-
-      {/* Second Hero Section */}
-      <div className="hero-section2">
-        <img src={HeroImage1} alt="Hero" className="hero-image" />
+      <div>
+        {/* Video Section */}
+        <VideoSection />
       </div>
+
+
 
       {/* Feature Section */}
       <div className="feature-section">
@@ -63,6 +65,11 @@ const Home = () => {
           <h3>Responsive</h3>
           <p>Works seamlessly on all devices.</p>
         </div>
+
+      </div>
+      {/* Second Hero Section */}
+      <div className="hero-section2">
+        <img src={HeroImage1} alt="Hero" className="hero-image" />
       </div>
     </div>
   );
