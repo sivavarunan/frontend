@@ -23,10 +23,11 @@ const Navbar = () => {
 
     return (
         <div className={`navbar ${menu}`}>
-            <div className="navbar-overlay" onClick={toggleMenuOpen}></div>
-            <button type="button" className="navbar-burger" onClick={toggleMenuOpen}>
-                <span className="material-icons">menu</span>
-            </button>
+            
+            {/* <div className="navbar-overlay" onClick={toggleMenuOpen}></div> */}
+            {/* <button type="button" className="navbar-burger" onClick={toggleMenuOpen}> */}
+                {/* <span className="material-icons">menu</span> */}
+            {/* </button> */}
 
             <h1 className="navbar-title">
                 <Link to='/' className="link-style">PROJECT</Link>
