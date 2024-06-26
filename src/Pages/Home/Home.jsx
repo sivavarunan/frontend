@@ -4,12 +4,18 @@ import HeroImage from './hero.png';
 import HeroImage1 from './hero1.png';
 import tree from './tree.jpg';
 import river from './river.jpg';
+import mc1 from './mc1.png'
+import mc2 from './mc2.png'
+import aw1 from './aw1.png'
+import aw2 from './aw2.png'
 import './Home.css';
 import { FaCogs, FaUsers, FaMobile } from 'react-icons/fa';
 import VideoSection from './VideoSection';
 
 const Home = () => {
   const images = [tree, river];
+  const images1 = [mc1, mc2];
+  const images2 = [aw1, aw2];
 
   return (
     <div>
@@ -28,7 +34,7 @@ const Home = () => {
         <Card
           title="Card 1"
           description="This is the first card."
-          images={images}
+          images={images1}
         />
         <Card
           title="Card 2"
@@ -38,7 +44,7 @@ const Home = () => {
         <Card
           title="Card 3"
           description="This is the third card."
-          images={images}
+          images={images2}
         />
       </div>
       <div>
