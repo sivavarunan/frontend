@@ -14,7 +14,7 @@ const Navbar = () => {
         setIsLoggedIn(!!token);
     }, []);
 
-    const toggleMenuOpen = () => setMenu(menu === 'open' ? 'closed' : 'open');
+    // const toggleMenuOpen = () => setMenu(menu === 'open' ? 'closed' : 'open');
 
     const isLoginPage = location.pathname === '/loginsignup';
     if (isLoginPage) {

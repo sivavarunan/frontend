@@ -11,8 +11,8 @@ const VideoSection = () => {
         Your browser does not support the video tag.
       </video>
       <div className="overlay">
-        <h2>Watch Our Animation</h2>
-        <p>Enjoy this mesmerizing animation loop.</p>
+        <h2>The World is What We Imagine..</h2>
+        <p>Enjoy every moment of it.</p>
       </div>
     </div>
   );
