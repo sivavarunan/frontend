@@ -3,10 +3,12 @@ import './Store.css';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import PaymentForm from './PaymentForm';
+import { FaShoppingCart } from 'react-icons/fa'; // Import the shopping cart icon
 import image1 from './1.jpg'; // import the image
 import image2 from './2.jpg';
 import image3 from './3.jpg';
 import image4 from './4.jpg';
+
 const stripePromise = loadStripe('YOUR_STRIPE_PUBLIC_KEY');
 
 const products = [
@@ -15,7 +17,6 @@ const products = [
   { id: 3, name: '250 points', price: 3.16, image: image3 },
   { id: 4, name: '1000 points', price: 11.18, image: image4 },
 ];
-
 
 const convertToLKR = (priceInUSD) => {
   const conversionRate = 312.94;
@@ -83,7 +84,7 @@ const Store = () => {
   return (
     <div className={`App ${cartOpen ? 'dark-mode' : ''}`}>
       <button className="cart-button" onClick={toggleCart}>
-        <i className="fas fa-shopping-cart"></i>
+        <FaShoppingCart />
         {cartItems.length > 0 && <span className="cart-count">{cartItems.length}</span>}
       </button>
       <div className="products">
@@ -92,7 +93,7 @@ const Store = () => {
         ))}
       </div>
       {cartOpen && (
-        <Cart cartItems={cartItems} total={convertToLKR(total)} checkout={toggleCart}>
+        <Cart cartItems={cartItems} total={convertToLKR(total)} checkout={checkout}>
           <Elements stripe={stripePromise}>
             <PaymentForm checkout={checkout} />
           </Elements>

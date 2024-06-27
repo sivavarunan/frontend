@@ -27,6 +27,7 @@ const Home = () => {
           <p>Discover amazing features and content.</p>
           <button className="sbutton">Get Started</button>
         </div>
+        <div className="overlay-text">"Sometimes Our Only Choice Is To Walk Away From Everything We Know" - Jin Sakai</div>
       </div>
 
       {/* Cards Section */}
@@ -47,12 +48,9 @@ const Home = () => {
           images={images2}
         />
       </div>
-      <div>
-        {/* Video Section */}
-        <VideoSection />
-      </div>
 
-
+      {/* Video Section */}
+      <VideoSection />
 
       {/* Feature Section */}
       <div className="feature-section">
@@ -71,11 +69,12 @@ const Home = () => {
           <h3>Responsive</h3>
           <p>Works seamlessly on all devices.</p>
         </div>
-
       </div>
+
       {/* Second Hero Section */}
-      <div className="hero-section2">
+      <div className="hero-section-2">
         <img src={HeroImage1} alt="Hero" className="hero-image" />
+        <div className="overlay-text">The path to victory is paved with sacrifice and perseverance</div>
       </div>
     </div>
   );

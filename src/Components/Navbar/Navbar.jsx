@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { Link, useLocation } from 'react-router-dom';
-import Panel from '../../Pages/LoginSignup/Panel';
 import { FiSun, FiMoon } from 'react-icons/fi';
 
 const Navbar = ({ toggleTheme, theme }) => {
@@ -39,7 +38,8 @@ const Navbar = ({ toggleTheme, theme }) => {
                     <Link to='/about' className="link-style">About</Link>
                 </button>
                 {isLoggedIn ? (
-                    <button> <Panel />
+                    <button className={menu === "usersettings" ? "active" : ""} onClick={() => setMenu("usersettings")}>
+                        <Link to='/usersettings' className="link-style">User Settings</Link>
                     </button>
                 ) : (
                     <button className={menu === "loginsignup" ? "active" : "loginsignup"} onClick={() => setMenu("loginsignup")}>
