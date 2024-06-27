@@ -1,12 +1,20 @@
 import React from "react";
 import './Footer.css';
+import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 const Footer = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+
     return (
         <div className="footer">
             <nav className="footer-menu">
-                <button className="footer-button">Home</button>
+                <Link to="/" className="footer-button" onClick={scrollToTop}>Home</Link>
                 <button className="footer-button">About Us</button>
                 <button className="footer-button">Services</button>
                 <button className="footer-button">Contact</button>

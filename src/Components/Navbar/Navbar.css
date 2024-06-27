@@ -99,6 +99,24 @@ button {
     color: var(--link-hover-color);
 }
 
+.theme-toggle-button {
+    border: 1px solid rgb(108, 107, 107);
+    color: var(--navbar-text-color);
+    font-size: 17px;
+    cursor: pointer;
+    transition: color 0.3s;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle-button:hover {
+    color: var(--link-hover-color);
+}
+
 @media only screen and (min-width: 600px) {
     .navbar {
         padding: 16px;

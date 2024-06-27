@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { Link, useLocation } from 'react-router-dom';
 import Panel from '../../Pages/LoginSignup/Panel';
+import { FiSun, FiMoon } from 'react-icons/fi';
 
 const Navbar = ({ toggleTheme, theme }) => {
     const [menu, setMenu] = useState("closed");
@@ -46,7 +47,7 @@ const Navbar = ({ toggleTheme, theme }) => {
                     </button>
                 )}
                 <button onClick={toggleTheme} className="theme-toggle-button">
-                    Switch to {theme === 'dark' ? 'Light' : 'Dark'} Mode
+                    {theme === 'dark' ? <FiSun /> : <FiMoon />}
                 </button>
             </nav>
         </div>
