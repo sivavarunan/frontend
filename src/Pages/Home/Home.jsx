@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import Card from './card';
 import HeroImage from './hero.png';
 import HeroImage1 from './hero1.png';
@@ -17,16 +17,6 @@ const Home = () => {
   const featureRef = useRef();
   const isVisible = useOnScreen(featureRef, '50px');
 
-  console.log('Feature section visibility:', isVisible);
-
-  const images = [tree, river];
-  const images1 = [mc1, mc2];
-  const images2 = [aw1, aw2];
-
-  useEffect(() => {
-    console.log('Feature section ref:', featureRef.current);
-  }, [featureRef]);
-
   return (
     <div>
       {/* Hero Section */}
@@ -41,10 +31,12 @@ const Home = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="card-container">
-        <Card title="Card 1" description="This is the first card." images={images1} />
-        <Card title="Card 2" description="This is the second card." images={images} />
-        <Card title="Card 3" description="This is the third card." images={images2} />
+      <div ref={featureRef} className={`card-section ${isVisible ? 'animate' : ''}`}>
+        <div className="card-container">
+          <Card title="Card 1" className="card1" description="This is the first card." images={[mc1, mc2]} />
+          <Card title="Card 2" className="card2" description="This is the second card." images={[tree, river]} />
+          <Card title="Card 3" className="card3" description="This is the third card." images={[aw1, aw2]} />
+        </div>
       </div>
 
       {/* Video Section */}
