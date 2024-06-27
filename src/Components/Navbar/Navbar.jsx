@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { Link, useLocation } from 'react-router-dom';
-// import Popup from '../../Pages/LoginSignup/popup';
 import Panel from '../../Pages/LoginSignup/Panel';
 
-const Navbar = () => {
+const Navbar = ({ toggleTheme, theme }) => {
     const [menu, setMenu] = useState("closed");
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const location = useLocation();
@@ -14,20 +13,13 @@ const Navbar = () => {
         setIsLoggedIn(!!token);
     }, []);
 
-    // const toggleMenuOpen = () => setMenu(menu === 'open' ? 'closed' : 'open');
-
     const isLoginPage = location.pathname === '/loginsignup';
     if (isLoginPage) {
         return null;
     }
+
     return (
         <div className={`navbar ${menu}`}>
-            
-            {/* <div className="navbar-overlay" onClick={toggleMenuOpen}></div> */}
-            {/* <button type="button" className="navbar-burger" onClick={toggleMenuOpen}> */}
-                {/* <span className="material-icons">menu</span> */}
-            {/* </button> */}
-
             <h1 className="navbar-title">
                 <Link to='/' className="link-style" onClick={() => setMenu("Home")}>PROJECT</Link>
             </h1>
@@ -47,12 +39,15 @@ const Navbar = () => {
                 </button>
                 {isLoggedIn ? (
                     <button> <Panel />
-                </button>
+                    </button>
                 ) : (
-                        <button className={menu === "loginsignup" ? "active" : "loginsignup"} onClick={() => setMenu("loginsignup")}>
-                            <Link to='/loginsignup' className="link-style">Login
-                            </Link></button>
+                    <button className={menu === "loginsignup" ? "active" : "loginsignup"} onClick={() => setMenu("loginsignup")}>
+                        <Link to='/loginsignup' className="link-style">Login</Link>
+                    </button>
                 )}
+                <button onClick={toggleTheme} className="theme-toggle-button">
+                    Switch to {theme === 'dark' ? 'Light' : 'Dark'} Mode
+                </button>
             </nav>
         </div>
     );

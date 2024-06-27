@@ -1,13 +1,39 @@
-body {
-  /* min-height: 100vh; */
-  font-family: "Poppins", sans-serif;
-  line-height: 1.5;
-  /* font-weight: 400; */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --input-bg: #f0f0f0;
+  --input-text-color: #000000;
+  --button-bg: #cccccc;
+  --button-text-color: #000000;
+  --button-bg-hover: #aaaaaa;
+  --button-text-hover: #000000;
+  --background-gradient: radial-gradient(circle, rgba(170, 170, 170, 0.899) 28%, rgba(255, 252, 252, 0.661) 77%);
+}
+
+[data-theme="dark"] {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --input-bg: #555555;
+  --input-text-color: #ffffff;
+  --button-bg: #777777;
+  --button-text-color: #ffffff;
+  --button-bg-hover: #999999;
+  --button-text-hover: #ffffff;
+  --background-gradient: radial-gradient(circle, rgba(0, 0, 0, 0.859) 28%, rgba(0, 0, 0, 0.821) 77%);
 
 }
-.container{
-  height:100vh;
-  overflow:hidden;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  background: var(--background-gradient);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  height: 100vh;
+  overflow: hidden;
   background: linear-gradient(145deg, #665b5b, #292c37);
 }
 
@@ -458,6 +484,3 @@ button.gray {
   background-color: #f44831df;
 }
  */
-
-
-

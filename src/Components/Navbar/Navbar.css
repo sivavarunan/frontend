@@ -2,9 +2,33 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:');
 
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --navbar-bg: #f0f0f0;
+    --navbar-text-color: #000000;
+    --button-bg-hover: #cccccc;
+    --button-text-hover: #000000;
+    --link-hover-color: #fd8888;
+    --navbar-background-image: url(./bg2.jpg);
+}
+
+[data-theme="dark"] {
+    --background-color: #333333;
+    --text-color: #ffffff;
+    --navbar-bg: #1a1a1a;
+    --navbar-text-color: #ffffff;
+    --button-bg-hover: #555555;
+    --button-text-hover: #f7b4b4;
+    --link-hover-color: #fd8888;
+    --navbar-background-image: none;
+}
+
 body {
     box-sizing: border-box;
     overflow-x: hidden;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 button {
@@ -24,9 +48,13 @@ button {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background: #1a1a1ab0;
-    color: #f9f9f9;
+    background: var(--navbar-bg);
+    color: var(--navbar-text-color);
     font-family: 'Poppins';
+    background-image: var(--navbar-background-image);
+    background-size: cover;
+    background-position: center; 
+    position: relative; 
 }
 
 .navbar-title {
@@ -41,7 +69,7 @@ button {
 }
 
 .navbar-menu > button {
-    color: #f0f0f0;
+    color: var(--navbar-text-color);
     text-decoration: none;
     padding: 9px;
     transition: all 0.3s;
@@ -49,25 +77,27 @@ button {
 }
 
 .navbar-menu > button:hover {
-     color: rgb(0, 0, 0);
+    color: var(--button-text-hover);
     border-radius: 10px;
-    background-color: #707070;
+    background-color: var(--button-bg-hover);
 }
 
 .navbar-menu > button.active {
-    color: #fff; 
-    background-color: rgba(191, 191, 191, 0.368);
+    color: var(--navbar-text-color);
+    background-color: rgba(83, 83, 83, 0.207);
 }
 
-
 .link-style {
-    color: #f0f0f0;
+    color: var(--navbar-text-color);
     text-decoration: none;
     padding: 20px;
     transition: all 0.3s;
     border-radius: 10px;
 }
 
+.link-style:hover {
+    color: var(--link-hover-color);
+}
 
 @media only screen and (min-width: 600px) {
     .navbar {

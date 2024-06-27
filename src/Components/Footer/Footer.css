@@ -1,26 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --footer-bg-color: #333;
+    --footer-text-color: #000000;
+    --footer-button-bg-hover: #555;
+    --footer-button-text-hover: #f7b4b4;
+    --footer-social-icon-bg: rgba(79, 92, 104, 0.304);
+    --footer-social-icon-hover-bg: #242424;
+    --footer-social-icon-color: #000000;
+    --footer-social-icon-hover-color: #fd8888;
+    --footer-background-image: url(./bg2.jpg);
+}
+
+[data-theme="dark"] {
+    --footer-bg-color: #1a1a1a;
+    --footer-text-color: #ffffff;
+    --footer-button-bg-hover: #555;
+    --footer-button-text-hover: #f7b4b4;
+    --footer-social-icon-bg: rgba(79, 92, 104, 0.304);
+    --footer-social-icon-hover-bg: #242424;
+    --footer-social-icon-color: #ffffff;
+    --footer-social-icon-hover-color: #fd8888;
+    --footer-background-image: none;
+}
+
 .footer {
-    background-color: #333;
-    color: rgb(0, 0, 0);
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
     padding: 20px 0;
     text-align: center;
-    background-image: url(./bg1.jpg);
+    background-image: var(--footer-background-image);
     background-size: cover;
-    background-position: center; 
-    position: relative; 
+    background-position: center;
+    position: relative;
 }
 
 .footer-menu {
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
-    position: relative; /* Ensures the menu is above the background */
-    z-index: 1; /* Sets the stacking order */
+    position: relative;
+    z-index: 1;
 }
 
 .footer-button {
     background: none;
     border: none;
-    color: rgb(0, 0, 0);
+    color: var(--footer-text-color);
     cursor: pointer;
     font-size: 16px;
     margin: 0 10px;
@@ -30,24 +56,24 @@
 }
 
 .footer-button:hover {
-    background-color: #555;
-    color: #f7b4b4;
+    background-color: var(--footer-button-bg-hover);
+    color: var(--footer-button-text-hover);
 }
 
 .social-media {
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
-    position: relative; /* Ensures the social media icons are above the background */
-    z-index: 1; /* Sets the stacking order */
+    position: relative;
+    z-index: 1;
 }
 
 .social-media-icon {
-    color: rgb(0, 0, 0);
+    color: var(--footer-social-icon-color);
     font-size: 24px;
     margin: 0 10px;
-    transition: color 0.3s;
-    background-color: rgba(79, 92, 104, 0.304);
+    transition: color 0.3s, background-color 0.3s;
+    background-color: var(--footer-social-icon-bg);
     border-radius: 50%;
     padding: 10px;
     display: flex;
@@ -56,13 +82,13 @@
 }
 
 .social-media-icon:hover {
-    color: #fd8888;
-    background-color: #242424;
+    color: var(--footer-social-icon-hover-color);
+    background-color: var(--footer-social-icon-hover-bg);
 }
 
 .footer-text {
     margin: 0;
     font-size: 14px;
-    position: relative; /* Ensures the text is above the background */
-    z-index: 1; /* Sets the stacking order */
+    position: relative;
+    z-index: 1;
 }

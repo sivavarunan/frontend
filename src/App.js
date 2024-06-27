@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Navbar } from "./Components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
@@ -31,10 +31,20 @@ const AppContent = () => {
 };
 
 function App() {
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
+        <Navbar toggleTheme={toggleTheme} theme={theme} />
         <AppContent />
       </BrowserRouter>
       <ToastContainer
@@ -47,7 +57,7 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="dark"
+        theme={theme}
       />
     </div>
   );
