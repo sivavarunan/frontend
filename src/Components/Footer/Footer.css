@@ -1,20 +1,26 @@
 .footer {
     background-color: #333;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 20px 0;
     text-align: center;
+    background-image: url(./bg1.jpg);
+    background-size: cover;
+    background-position: center; 
+    position: relative; 
 }
 
 .footer-menu {
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
+    position: relative; /* Ensures the menu is above the background */
+    z-index: 1; /* Sets the stacking order */
 }
 
 .footer-button {
     background: none;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     font-size: 16px;
     margin: 0 10px;
@@ -32,10 +38,12 @@
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
+    position: relative; /* Ensures the social media icons are above the background */
+    z-index: 1; /* Sets the stacking order */
 }
 
 .social-media-icon {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 24px;
     margin: 0 10px;
     transition: color 0.3s;
@@ -55,4 +63,6 @@
 .footer-text {
     margin: 0;
     font-size: 14px;
+    position: relative; /* Ensures the text is above the background */
+    z-index: 1; /* Sets the stacking order */
 }
