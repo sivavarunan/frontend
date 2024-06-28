@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './ImageCarousel.css';
 import HeroImage from './hero.png';
@@ -18,6 +18,9 @@ const images = [
 ];
 
 const ImageCarousel = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+
   useEffect(() => {
     const track = document.getElementById('image-track');
     let mouseDownAt = 0;
@@ -44,7 +47,6 @@ const ImageCarousel = () => {
 
       track.style.transform = `translate(${percentage}%, -50%)`;
 
-
       const images = track.getElementsByClassName("carousel-image");
       const nextPercentage = -percentage / 2;
       for (const image of images) {
@@ -63,6 +65,16 @@ const ImageCarousel = () => {
     };
   }, []);
 
+  const handleDoubleClick = (index) => {
+    setActiveIndex(index);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setActiveIndex(null);
+  };
+
   return (
     <div id="image-track" className="carousel-container">
       {images.map((src, index) => (
@@ -70,13 +82,28 @@ const ImageCarousel = () => {
           key={index}
           src={src}
           alt={`carousel-${index}`}
-          className="carousel-image"
+          className={`carousel-image ${activeIndex === index ? 'active' : ''}`}
           draggable="false"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: 'easeInOut' }}
+          onDoubleClick={() => handleDoubleClick(index)}
+          whileHover={{ scale: 1.1 }}
         />
       ))}
+
+      {showModal && (
+        <div className="modal-overlay" onClick={handleCloseModal}>
+          <motion.img
+            src={images[activeIndex]}
+            alt={`popup-${activeIndex}`}
+            className="modal-image"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
+          />
+        </div>
+      )}
     </div>
   );
 };
