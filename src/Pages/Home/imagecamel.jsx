@@ -43,6 +43,13 @@ const ImageCarousel = () => {
       percentage = Math.max(Math.min(prevPercentage + newPercentage, 0), -100);
 
       track.style.transform = `translate(${percentage}%, -50%)`;
+
+
+      const images = track.getElementsByClassName("carousel-image");
+      const nextPercentage = -percentage / 2;
+      for (const image of images) {
+        image.style.objectPosition = `${nextPercentage}% 50%`;
+      }
     };
 
     window.addEventListener('mousedown', handleMouseDown);
