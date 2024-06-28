@@ -50,6 +50,7 @@
   padding: 8px 12px;
   margin-top: 10px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .add-to-cart:hover, .remove-from-cart:hover {
@@ -60,7 +61,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #fff;
+  background-color: #5e5e5e;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   padding: 20px;
   width: 300px;
@@ -92,6 +93,7 @@
 
 .checkout {
   background-color: #28a745;
+  border-radius: 10px;
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -101,16 +103,16 @@
 
 .checkout:hover {
   background-color: #218838;
+  color: #333;
 }
 
 .cart-button {
   position: fixed;
-  top: 20px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
+  top: 120px;
+  right: 20px; 
   height: 40px;
   width: 40px;
   padding: 8px;
-  /* background-color: #007bff; */
   border: none;
   border-radius: 50%;
   font-size: 24px;
