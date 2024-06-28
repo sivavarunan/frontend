@@ -12,6 +12,7 @@ import './Home.css';
 import { FaCogs, FaUsers, FaMobile } from 'react-icons/fa';
 import VideoSection from './VideoSection';
 import useOnScreen from './useOnScreen';
+import ImageCarousel from './imagecamel';
 
 const Home = () => {
   const featureRef = useRef();
@@ -41,7 +42,9 @@ const Home = () => {
 
       {/* Video Section */}
       <VideoSection />
-
+     <div className='image-section'>
+        <ImageCarousel />
+        </div>
       {/* Feature Section */}
       <div ref={featureRef} className={`feature-section ${isVisible ? 'animate' : ''}`}>
         <div className="feature">
