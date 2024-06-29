@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './User.css';
 import { useNavigate } from 'react-router-dom';
-
+import { FaUserCircle } from 'react-icons/fa'; 
 
 const UserSettings = () => {
   const [user, setUser] = useState(null);
@@ -47,14 +47,17 @@ const UserSettings = () => {
       <h2>User Settings</h2>
       <div className="user-details">
         <div className="avatar">
-          <img src={user.avatarUrl} alt="User Avatar" />
+          {user.avatarUrl ? (
+            <img src={user.avatarUrl} alt="User Avatar" />
+          ) : (
+            <FaUserCircle size={80} color="#ddd" /> // Default icon
+          )}
         </div>
         <div className="info">
           <p><strong>Username:</strong> {user.username}</p>
           <p><strong>Email:</strong> {user.email}</p>
           <button className="logout-button" onClick={handleLogout}>Logout</button>
         </div>
-       
       </div>
     </div>
   );

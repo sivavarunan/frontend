@@ -3,19 +3,19 @@ import './Store.css';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import PaymentForm from './PaymentForm';
-import { FaShoppingCart } from 'react-icons/fa'; // Import the shopping cart icon
-import image1 from './1.jpg'; // import the image
-import image2 from './2.jpg';
-import image3 from './3.jpg';
-import image4 from './4.jpg';
+import { FaShoppingCart } from 'react-icons/fa'; 
+import image1 from './Images/brush.jpg'; 
+import image2 from './Images/lipstick.jpg';
+import image3 from './Images/color.jpg';
+import image4 from './Images/qutex.jpg';
 
 const stripePromise = loadStripe('YOUR_STRIPE_PUBLIC_KEY');
 
 const products = [
-  { id: 1, name: '50 points', price: 0.80, image: image1 },
-  { id: 2, name: '100 points', price: 1.47, image: image2 },
-  { id: 3, name: '250 points', price: 3.16, image: image3 },
-  { id: 4, name: '1000 points', price: 11.18, image: image4 },
+  { id: 1, name: 'Brush', price: 0.80, image: image1 },
+  { id: 2, name: 'Lipstick', price: 1.47, image: image2 },
+  { id: 3, name: 'Color', price: 3.16, image: image3 },
+  { id: 4, name: 'Qutex', price: 11.18, image: image4 },
 ];
 
 const convertToLKR = (priceInUSD) => {
@@ -29,14 +29,18 @@ const Product = ({ product, addToCart, removeFromCart }) => {
 
   return (
     <div className="product">
-      <img src={product.image} alt={product.name} />
-      <h3>{product.name}</h3>
-      <p>Rs {convertToLKR(product.price)}</p>
-      {!isAddedToCart && <button className="add-to-cart" onClick={() => addToCart(product)}>Add to Cart</button>}
-      {isAddedToCart && <button className="remove-from-cart" onClick={() => removeFromCart(product)}>Remove from Cart</button>}
+      <img src={product.image} alt={product.name} className="product-image" />
+      <div className="product-details">
+        <h3>{product.name}</h3>
+        <p>Rs {convertToLKR(product.price)}</p>
+        {!isAddedToCart && <button className="add-to-cart" onClick={() => addToCart(product)}>Add to Cart</button>}
+        {isAddedToCart && <button className="remove-from-cart" onClick={() => removeFromCart(product)}>Remove from Cart</button>}
+      </div>
     </div>
   );
 };
+
+
 
 const Cart = ({ cartItems, total, checkout }) => {
   return (
@@ -87,10 +91,12 @@ const Store = () => {
         <FaShoppingCart />
         {cartItems.length > 0 && <span className="cart-count">{cartItems.length}</span>}
       </button>
+      <div className='x'>
       <div className="products">
         {products.map(product => (
           <Product key={product.id} product={product} addToCart={addToCart} removeFromCart={removeFromCart} />
         ))}
+        </div>
       </div>
       {cartOpen && (
         <Cart cartItems={cartItems} total={convertToLKR(total)} checkout={checkout}>
