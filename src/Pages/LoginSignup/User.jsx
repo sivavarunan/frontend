@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './User.css';
+import { useNavigate } from 'react-router-dom';
+
 
 const UserSettings = () => {
   const [user, setUser] = useState(null);
+  const navigate = useNavigate(); // Hook to use navigation
 
   useEffect(() => {
     const fetchUserDetails = async () => {
@@ -34,6 +37,10 @@ const UserSettings = () => {
   if (!user) {
     return <div>Loading...</div>;
   }
+  const handleLogout = () => {
+    localStorage.removeItem('token'); // Remove token from local storage
+    navigate('/loginsignup'); // Redirect to login page
+  };
 
   return (
     <div className="user-settings">
@@ -45,7 +52,9 @@ const UserSettings = () => {
         <div className="info">
           <p><strong>Username:</strong> {user.username}</p>
           <p><strong>Email:</strong> {user.email}</p>
+          <button className="logout-button" onClick={handleLogout}>Logout</button>
         </div>
+       
       </div>
     </div>
   );

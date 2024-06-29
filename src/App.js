@@ -10,6 +10,8 @@ import Store from "./Pages/Store/Store";
 import LoginSignup from "./Pages/LoginSignup/LoginSignup";
 import { ToastContainer } from "react-toastify";
 import { Footer } from "./Components/Footer/Footer";
+import User from "./Pages/LoginSignup/User";
+import UserSettings from "./Pages/LoginSignup/User";
 
 const AppContent = () => {
   const location = useLocation();
@@ -24,6 +26,8 @@ const AppContent = () => {
         <Route path="/community" element={<Community />} />
         <Route path="/store" element={<Store />} />
         <Route path="/loginsignup" element={<LoginSignup />} />
+        <Route path="/User" element={<UserSettings />} />
+
       </Routes>
       {!isLoginPage && <Footer />}
     </>

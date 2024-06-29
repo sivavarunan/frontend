@@ -39,7 +39,7 @@ const Navbar = ({ toggleTheme, theme }) => {
                 </button>
                 {isLoggedIn ? (
                     <button className={menu === "usersettings" ? "active" : ""} onClick={() => setMenu("usersettings")}>
-                        <Link to='/usersettings' className="link-style">User Settings</Link>
+                        <Link to='/user' className="link-style">User Settings</Link>
                     </button>
                 ) : (
                     <button className={menu === "loginsignup" ? "active" : "loginsignup"} onClick={() => setMenu("loginsignup")}>
