@@ -291,6 +291,20 @@
 .checkout:hover {
   background-color: var(--checkout-hover-bg-color);
 }
+.close-cart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close-cart:hover {
+  color: #ff0000;
+}
 
 @media (max-width: 768px) {
   .products {

@@ -18,31 +18,35 @@ const Navbar = ({ toggleTheme, theme }) => {
         return null;
     }
 
+    const handleMenuClick = (menuName) => {
+        setMenu(menuName);
+    };
+
     return (
         <div className={`navbar ${menu}`}>
             <h1 className="navbar-title">
-                <Link to='/' className="link-style" onClick={() => setMenu("Home")}>PROJECT</Link>
+                <Link to='/' className="link-style" onClick={() => handleMenuClick("Home")}>PROJECT</Link>
             </h1>
 
             <nav className={`navbar-menu ${menu}`}>
-                <button className={menu === "community" ? "active" : ""} onClick={() => setMenu("community")}>
+                <button className={menu === "community" ? "active" : ""} onClick={() => handleMenuClick("community")}>
                     <Link to='/community' className="link-style">Community</Link>
                 </button>
-                <button className={menu === "study" ? "active" : ""} onClick={() => setMenu("study")}>
+                <button className={menu === "study" ? "active" : ""} onClick={() => handleMenuClick("study")}>
                     <Link to='/study' className="link-style">Study</Link>
                 </button>
-                <button className={menu === "store" ? "active" : ""} onClick={() => setMenu("store")}>
+                <button className={menu === "store" ? "active" : ""} onClick={() => handleMenuClick("store")}>
                     <Link to='/store' className="link-style">Store</Link>
                 </button>
-                <button className={menu === "about" ? "active" : ""} onClick={() => setMenu("about")}>
+                <button className={menu === "about" ? "active" : ""} onClick={() => handleMenuClick("about")}>
                     <Link to='/about' className="link-style">About</Link>
                 </button>
                 {isLoggedIn ? (
-                    <button className={menu === "usersettings" ? "active" : ""} onClick={() => setMenu("usersettings")}>
+                    <button className={menu === "usersettings" ? "active" : ""} onClick={() => handleMenuClick("usersettings")}>
                         <Link to='/user' className="link-style">User Settings</Link>
                     </button>
                 ) : (
-                    <button className={menu === "loginsignup" ? "active" : "loginsignup"} onClick={() => setMenu("loginsignup")}>
+                    <button className={menu === "loginsignup" ? "active" : "loginsignup"} onClick={() => handleMenuClick("loginsignup")}>
                         <Link to='/loginsignup' className="link-style">Login</Link>
                     </button>
                 )}

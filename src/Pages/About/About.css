@@ -6,7 +6,7 @@
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: transparent;
     transition: all 0.3s ease;
     border: 2px solid #ccc;
     border-radius: 8px;

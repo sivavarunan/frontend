@@ -3,7 +3,7 @@ import './Store.css';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import PaymentForm from './PaymentForm';
-import { FaShoppingCart } from 'react-icons/fa'; 
+import { FaShoppingCart, FaTimes } from 'react-icons/fa'; 
 import image1 from './Images/brush.jpg'; 
 import image2 from './Images/lipstick.jpg';
 import image3 from './Images/color.jpg';
@@ -42,9 +42,10 @@ const Product = ({ product, addToCart, removeFromCart }) => {
   );
 };
 
-const Cart = ({ cartItems, total, checkout }) => {
+const Cart = ({ cartItems, total, checkout, toggleCart }) => {
   return (
     <div className="cart">
+      <button className="close-cart" onClick={toggleCart}><FaTimes /></button>
       <h2>Cart</h2>
       <ul>
         {cartItems.map(item => (
@@ -56,6 +57,7 @@ const Cart = ({ cartItems, total, checkout }) => {
     </div>
   );
 };
+
 
 const Store = () => {
   const [cartOpen, setCartOpen] = useState(false);
@@ -101,11 +103,12 @@ const Store = () => {
         </div>
       </div>
       {cartOpen && (
-        <Cart cartItems={cartItems} total={convertToLKR(total)} checkout={checkout}>
-          <Elements stripe={stripePromise}>
-            <PaymentForm checkout={checkout} />
-          </Elements>
-        </Cart>
+        <Cart cartItems={cartItems} total={convertToLKR(total)} checkout={checkout} toggleCart={toggleCart}>
+        <Elements stripe={stripePromise}>
+          <PaymentForm checkout={checkout} />
+        </Elements>
+      </Cart>
+      
       )}
     </div>
   );
