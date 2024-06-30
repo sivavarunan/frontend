@@ -37,31 +37,70 @@
   background-attachment: fixed;
   background-position: center;
   background-color: var(--bg-color);
-  /* color: var(--text-color); */
 }
 
 .search-bar {
   margin: 20px 0;
   display: flex;
   justify-content: center;
+ 
+}
+
+.search-bar-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
 }
 
 .search-bar input {
-  background-color: var(--input-bg-color);
-  width: 80%;
-  padding: 10px;
+  background-color: rgba(69, 69, 69, 0.786);
+  width: 100%;
+  padding: 10px 10px 10px 10px;
   font-size: 16px;
-  border: 1px solid var(--border-color);
+  /* border: 1px solid #000000; */
+  border: none;
   border-radius: 4px;
-  color: var(--text-color);
+  color: #fff;
 }
 
 .search-bar input:hover {
-  background-color: var(--input-hover-bg-color);
+  background-color: #000000aa;
+  color: #e0e0e0d5;
 }
 
 .search-bar input::placeholder {
-  color: var(--placeholder-color); 
+  color: #000000; 
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+}
+
+.search-bar input:hover + .search-icon {
+  color: #000;
+}
+
+/* Add dark mode styles */
+.dark-mode .search-bar input {
+  background-color: rgba(200, 200, 200, 0.752);
+  color: #000;
+}
+
+.dark-mode .search-bar input:hover {
+  background-color: #333333;
+  color: #fff;
+}
+
+.dark-mode .search-icon {
+  color: #666666;
+}
+
+.dark-mode .search-bar input:hover + .search-icon {
+  color: #fff;
 }
 
 
@@ -201,7 +240,7 @@
 }
 
 .add-to-cart:hover, .remove-from-cart:hover {
-  background-color: #0056b3;
+  background-color: var(--button-hover-bg-color);
 }
 
 .cart {
