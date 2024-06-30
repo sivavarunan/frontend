@@ -8,6 +8,8 @@ import image1 from './Images/brush.jpg';
 import image2 from './Images/lipstick.jpg';
 import image3 from './Images/color.jpg';
 import image4 from './Images/qutex.jpg';
+import SearchBar from './SearchBar';
+
 
 const stripePromise = loadStripe('YOUR_STRIPE_PUBLIC_KEY');
 
@@ -58,6 +60,7 @@ const Cart = ({ cartItems, total, checkout }) => {
 const Store = () => {
   const [cartOpen, setCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const toggleCart = () => {
     setCartOpen(!cartOpen);
@@ -89,6 +92,7 @@ const Store = () => {
         <FaShoppingCart />
         {cartItems.length > 0 && <span className="cart-count">{cartItems.length}</span>}
       </button>
+      <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className='store'>
         <div className="products">
           {products.map(product => (
