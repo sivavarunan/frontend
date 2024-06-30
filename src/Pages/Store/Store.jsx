@@ -40,8 +40,6 @@ const Product = ({ product, addToCart, removeFromCart }) => {
   );
 };
 
-
-
 const Cart = ({ cartItems, total, checkout }) => {
   return (
     <div className="cart">
@@ -91,11 +89,11 @@ const Store = () => {
         <FaShoppingCart />
         {cartItems.length > 0 && <span className="cart-count">{cartItems.length}</span>}
       </button>
-      <div className='x'>
-      <div className="products">
-        {products.map(product => (
-          <Product key={product.id} product={product} addToCart={addToCart} removeFromCart={removeFromCart} />
-        ))}
+      <div className='store'>
+        <div className="products">
+          {products.map(product => (
+            <Product key={product.id} product={product} addToCart={addToCart} removeFromCart={removeFromCart} />
+          ))}
         </div>
       </div>
       {cartOpen && (
