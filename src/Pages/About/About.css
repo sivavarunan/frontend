@@ -1,0 +1,50 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+.about-container {
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: all 0.3s ease;
+}
+
+.about-container h1,
+.about-container h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--heading-color);
+    margin-bottom: 16px;
+}
+
+.about-container p {
+    margin-bottom: 16px;
+}
+
+.about-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-container ul li {
+    margin-bottom: 10px;
+}
+
+.about-container ul li strong {
+    color: var(--strong-color);
+}
+
+:root {
+    --text-color: #555;
+    --background-color: #fff;
+    --heading-color: #333;
+    --strong-color: #000;
+}
+
+[data-theme="dark"] {
+    --text-color: #ddd;
+    --background-color: #1e1e1e;
+    --heading-color: #eee;
+    --strong-color: #fff;
+}
