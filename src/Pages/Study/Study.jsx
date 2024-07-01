@@ -1,6 +1,6 @@
 import React from 'react';
 import './Study.css';  
-import BentoGrid from './BentoGrid/BentoGrid';
+import BentoGrid from '../Home/BentoGrid/BentoGrid';
 
 // import img1 from './Images/img1.jpg';
 // import img2 from './Images/img2.jpg';
@@ -9,7 +9,7 @@ import BentoGrid from './BentoGrid/BentoGrid';
 const Study = () => {
   return (
     <div>
-        <BentoGrid />
+        {/* <BentoGrid /> */}
     </div>
     // <div className="bento-grid">
     //   <div className="bento-column">

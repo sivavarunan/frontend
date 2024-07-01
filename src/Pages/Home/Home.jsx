@@ -13,6 +13,7 @@ import { FaCogs, FaUsers, FaMobile } from 'react-icons/fa';
 import VideoSection from './VideoSection';
 import useOnScreen from './useOnScreen';
 import ImageCarousel from './imagecamel';
+import BentoGrid from './BentoGrid/BentoGrid';
 
 const Home = () => {
   const featureRef = useRef();
@@ -30,9 +31,19 @@ const Home = () => {
         </div>
         <div className="overlay-text">"Sometimes Our Only Choice Is To Walk Away From Everything We Know" - Jin Sakai</div>
       </div>
+       {/* Bento Grid */}
+    
+    <BentoGrid />
+     
 
-      {/* Cards Section */}
-      <div ref={featureRef} className={`card-section ${isVisible ? 'animate' : ''}`}>
+
+      {/* Video Section */}
+      <VideoSection />
+      <div className='image-section'>
+        <ImageCarousel />
+      </div>
+    {/* Cards Section */}
+    <div ref={featureRef} className={`card-section ${isVisible ? 'animate' : ''}`}>
         <div className="card-container">
           <Card title="Card 1" className="card1" description="This is the first card." images={[mc1, mc2]} />
           <Card title="Card 2" className="card2" description="This is the second card." images={[tree, river]} />
@@ -40,11 +51,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Video Section */}
-      <VideoSection />
-     <div className='image-section'>
-        <ImageCarousel />
-        </div>
       {/* Feature Section */}
       <div ref={featureRef} className={`feature-section ${isVisible ? 'animate' : ''}`}>
         <div className="feature">
@@ -63,7 +69,7 @@ const Home = () => {
           <p>Works seamlessly on all devices.</p>
         </div>
       </div>
-
+  
       {/* Second Hero Section */}
       <div className="hero-section-2">
         <img src={HeroImage1} alt="Hero" className="hero-image" />
