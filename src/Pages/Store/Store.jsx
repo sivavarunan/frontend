@@ -95,6 +95,7 @@ const Store = () => {
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className='store'>
         <div className="products">
+          {/* <div className='big-product'></div> */}
           {products.map(product => (
             <Product key={product.id} product={product} addToCart={addToCart} removeFromCart={removeFromCart} />
           ))}
