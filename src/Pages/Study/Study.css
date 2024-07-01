@@ -1,4 +1,4 @@
-.bento-grid {
+/* .bento-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
@@ -21,15 +21,15 @@
   }
   
   .bento-item-large {
-    grid-column: span 2; /* Span two columns */
+    grid-column: span 2; 
     border: 1px solid #ccc;
     padding: 20px;
   }
   
-  /* Responsive adjustments */
+
   @media (max-width: 768px) {
     .bento-item-large {
-      grid-column: auto; /* Reset to default single column on smaller screens */
+      grid-column: auto; 
     }
   }
-  
+   */
