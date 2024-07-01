@@ -1,4 +1,4 @@
-// App.js
+
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route ,useLocation } from 'react-router-dom';
@@ -46,7 +46,6 @@ function App() {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
 
-    // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2000);

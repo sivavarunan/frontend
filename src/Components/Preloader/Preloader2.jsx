@@ -40,7 +40,7 @@ function PreLoader2() {
             setCompleted(true);
           }, 1000);
         });
-    }, 2000);
+    }, 1000);
   }, []);
 
   return (

@@ -3,12 +3,13 @@ import './Store.css';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import PaymentForm from './PaymentForm';
-import { FaShoppingCart, FaTimes } from 'react-icons/fa'; 
-import image1 from './Images/brush.jpg'; 
+import { FaShoppingCart, FaTimes } from 'react-icons/fa';
+import image1 from './Images/brush.jpg';
 import image2 from './Images/lipstick.jpg';
 import image3 from './Images/color.jpg';
 import image4 from './Images/qutex.jpg';
 import SearchBar from './SearchBar';
+import ImageSlider from './ImageSlider';
 
 const stripePromise = loadStripe('YOUR_STRIPE_PUBLIC_KEY');
 
@@ -93,9 +94,9 @@ const Store = () => {
         {cartItems.length > 0 && <span className="cart-count">{cartItems.length}</span>}
       </button>
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <ImageSlider />
       <div className='store'>
         <div className="products">
-          {/* <div className='big-product'></div> */}
           {products.map(product => (
             <Product key={product.id} product={product} addToCart={addToCart} removeFromCart={removeFromCart} />
           ))}
