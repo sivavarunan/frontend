@@ -10,7 +10,6 @@ import image3 from './Images/color.jpg';
 import image4 from './Images/qutex.jpg';
 import SearchBar from './SearchBar';
 
-
 const stripePromise = loadStripe('YOUR_STRIPE_PUBLIC_KEY');
 
 const products = [
@@ -58,11 +57,11 @@ const Cart = ({ cartItems, total, checkout, toggleCart }) => {
   );
 };
 
-
 const Store = () => {
   const [cartOpen, setCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const [showPaymentForm, setShowPaymentForm] = useState(false);
 
   const toggleCart = () => {
     setCartOpen(!cartOpen);
@@ -82,8 +81,7 @@ const Store = () => {
   };
 
   const checkout = () => {
-    // Implement the checkout logic here (e.g., redirect to a checkout page)
-    console.log('Checkout');
+    setShowPaymentForm(true);
   };
 
   const total = cartItems.reduce((sum, item) => sum + (item.price * item.cartQuantity), 0);
@@ -102,13 +100,15 @@ const Store = () => {
           ))}
         </div>
       </div>
-      {cartOpen && (
-        <Cart cartItems={cartItems} total={convertToLKR(total)} checkout={checkout} toggleCart={toggleCart}>
-        <Elements stripe={stripePromise}>
-          <PaymentForm checkout={checkout} />
-        </Elements>
-      </Cart>
-      
+      {cartOpen && !showPaymentForm && (
+        <Cart cartItems={cartItems} total={convertToLKR(total)} checkout={checkout} toggleCart={toggleCart} />
+      )}
+      {showPaymentForm && (
+        <div className="payment-section">
+          <Elements stripe={stripePromise}>
+            <PaymentForm checkout={checkout} />
+          </Elements>
+        </div>
       )}
     </div>
   );
