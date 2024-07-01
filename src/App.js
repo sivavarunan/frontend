@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route ,useLocation } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { Navbar } from './Components/Navbar/Navbar';
 import { Footer } from './Components/Footer/Footer';
-import Preloader from './Components/Preloader/Preloader';
+import Preloader2 from './Components/Preloader/Preloader2';
 import Loading from './Components/Loading/Loading';
 
 const Home = lazy(() => import('./Pages/Home/Home'));
@@ -59,7 +59,7 @@ function App() {
   };
 
   if (isLoading) {
-    return <Preloader />;
+    return <Preloader2 />;
   }
 
   return (
