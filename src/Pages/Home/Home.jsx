@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Card from './card';
 import HeroImage from './hero.png';
 import HeroImage1 from './hero1.png';
@@ -11,11 +11,15 @@ import aw2 from './aw2.png';
 import './Home.css';
 import { FaCogs, FaUsers, FaMobile } from 'react-icons/fa';
 import VideoSection from './VideoSection';
+import useOnScreen from './UseOnScreen';
 import ImageCarousel from './imagecamel';
 import BentoGrid from './BentoGrid/BentoGrid';
 import { Fade } from 'react-awesome-reveal';
 
 const Home = () => {
+  const featureRef = useRef();
+  const isVisible = useOnScreen(featureRef, '50px');
+
   return (
     <div>
       {/* Hero Section */}
@@ -42,16 +46,25 @@ const Home = () => {
       </div>
 
       {/* Bento Grid */}
+      <div>
+      <Fade direction="left" triggerOnce delay={100}>
       <BentoGrid />
+      </Fade>
+      </div>
 
       {/* Video Section */}
+      <div>
+      <Fade direction="up" triggerOnce delay={100}>
       <VideoSection />
+      </Fade>
+      </div>
+
       <div className='image-section'>
         <ImageCarousel />
       </div>
 
       {/* Cards Section */}
-      <div className="card-section">
+      <div ref={featureRef} className={`card-section ${isVisible ? 'animate' : ''}`}>
         <Fade cascade direction="up" triggerOnce>
           <div className="card-container">
             <Card title="Card 1" className="card1" description="This is the first card." images={[mc1, mc2]} />
@@ -62,7 +75,7 @@ const Home = () => {
       </div>
 
       {/* Feature Section */}
-      <div className="feature-section">
+      <div ref={featureRef} className={`feature-section ${isVisible ? 'animate' : ''}`}>
         <Fade cascade direction="up" triggerOnce>
           <div className="feature">
             <FaCogs size={36} />
