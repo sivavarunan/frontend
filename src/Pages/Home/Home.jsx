@@ -58,10 +58,13 @@ const Home = () => {
       <VideoSection />
       </Fade>
       </div>
-
+      <Fade direction="right" triggerOnce delay={100}>
       <div className='image-section'>
+      
         <ImageCarousel />
+        
       </div>
+      </Fade>
 
       {/* Cards Section */}
       <div ref={featureRef} className={`card-section ${isVisible ? 'animate' : ''}`}>
