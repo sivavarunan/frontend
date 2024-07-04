@@ -1,3 +1,8 @@
+:root {
+  --light-gradient: linear-gradient(270deg, #ffffff, #a0c4ff, #bdb2ff, #ffc6ff);
+  --dark-gradient: linear-gradient(270deg, #0e1120, #1b1e36, #212659, #1b1e36);
+}
+
 @keyframes gradientBackgroundLight {
   0% {
     background-position: 0% 50%;
@@ -23,17 +28,19 @@
 }
 
 .animated-background-light {
-  background: linear-gradient(270deg, #ffffff, #f0f0f0, #d4d4d4, #f0f0f0);
+  background: var(--light-gradient);
   background-color: #ffffff; 
-  background-size: 400% 400%; 
-  animation: gradientBackgroundLight 15s ease-in-out infinite;
+  background-size: 300% 300%; 
+  animation: gradientBackgroundLight 20s ease-in-out infinite;
   min-height: 100vh;
+  transform: translateZ(0);
 }
 
 .animated-background-dark {
-  background: linear-gradient(270deg, #0e1120, #1c1c1c, #363636, #1c1c1c);
+  background: var(--dark-gradient);
   background-color: #0e1120; 
-  background-size: 400% 400%; 
-  animation: gradientBackgroundDark 15s ease-in-out infinite;
+  background-size: 300% 300%; 
+  animation: gradientBackgroundDark 20s ease-in-out infinite; 
   min-height: 100vh;
+  transform: translateZ(0); 
 }
