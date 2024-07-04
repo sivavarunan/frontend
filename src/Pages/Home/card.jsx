@@ -5,12 +5,10 @@ import './CardComponent.css';
 const Card = ({ title, description, images }) => {
   return (
     <div className="card">
-      {/* <div className="card-header">
-        <h2>{title}</h2>
-      </div> */}
       <div className="card-body">
         <ImageSlider images={images} />
-        <p>{description}</p>
+        <h2 className="card-title">{title}</h2>
+        <p className="card-description">{description}</p>
       </div>
     </div>
   );
