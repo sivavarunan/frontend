@@ -1,13 +1,11 @@
-
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route ,useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { Navbar } from './Components/Navbar/Navbar';
 import { Footer } from './Components/Footer/Footer';
 import Preloader2 from './Components/Preloader/Preloader2';
 import Loading from './Components/Loading/Loading';
-
 
 const Home = lazy(() => import('./Pages/Home/Home'));
 const Study = lazy(() => import('./Pages/Study/Study'));
@@ -33,7 +31,7 @@ const AppContent = () => {
           <Route path="/store" element={<Store />} />
           <Route path="/loginsignup" element={<LoginSignup />} />
           <Route path="/user" element={<UserSettings />} />
-          <Route path="/contact" element={<Contact/>} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Suspense>
       {!isLoginPage && <Footer />}
@@ -65,7 +63,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className={theme === 'dark' ? 'animated-background-dark' : 'animated-background-light'}>
       <BrowserRouter>
         <Navbar toggleTheme={toggleTheme} theme={theme} />
         <AppContent />
