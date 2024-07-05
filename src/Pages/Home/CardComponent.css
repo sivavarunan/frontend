@@ -23,7 +23,7 @@
   overflow: hidden;
   max-width: 400px;
   margin: 20px auto;
-  background: var(--card-bg);
+  background: transparent;
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s, border 0.3s;
   flex: 1 1 33%;
   margin: 30px;
