@@ -1,6 +1,7 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import HeroImage from './hero.png'; 
+import Typewriter from 'react-typewriter-effect';
 
 const HeroSection = () => {
   return (
@@ -11,7 +12,12 @@ const HeroSection = () => {
       
       <div className="overlay-text">
         <Fade direction="up" triggerOnce delay={100}>
-          "Sometimes Our Only Choice Is To Walk Away From Everything We Know" - Jin Sakai
+        <Typewriter
+            text="Sometimes Our Only Choice Is To Walk Away From Everything We Know - Jin Sakai"
+            typeSpeed={100}
+            startDelay={100}
+            cursorColor="white"
+          />
         </Fade>
       </div>
       
