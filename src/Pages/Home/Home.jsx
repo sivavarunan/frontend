@@ -23,8 +23,22 @@ const Home = () => {
   return (
     <div>
      <HeroSection />
+      <div>
+      <div className="section">
+        <Fade direction="up" triggerOnce delay={300}>
+          <h1>Welcome to My Project</h1>
+        </Fade>
+        <Fade direction="up" triggerOnce delay={500}>
+          <p>Discover amazing features and content.</p>
+        </Fade>
+        <Fade direction="up" triggerOnce delay={700}>
+          <button className="sbutton">Get Started</button>
+        </Fade>
+      </div>
+      </div>
 
       {/* Bento Grid */}
+      
       <div>
       <Fade direction="left" triggerOnce delay={100}>
       <BentoGrid />
@@ -86,7 +100,7 @@ const Home = () => {
         <Fade direction="right" triggerOnce>
           <img src={HeroImage1} alt="Hero" className="hero-image" />
         </Fade>
-        <div className="overlay-text">
+        <div className="overlay-text-2">
           <Fade direction="left" triggerOnce delay={300}>
             The path to victory is paved with sacrifice and perseverance
           </Fade>
