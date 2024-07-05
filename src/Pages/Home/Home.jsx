@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import Card from './card';
-import HeroImage from './hero.png';
 import HeroImage1 from './hero1.png';
 import tree from './tree.jpg';
 import river from './river.jpg';
@@ -15,6 +14,7 @@ import useOnScreen from './UseOnScreen';
 import ImageCarousel from './imagecamel';
 import BentoGrid from './BentoGrid/BentoGrid';
 import { Fade } from 'react-awesome-reveal';
+import HeroSection from './HeroSection';
 
 const Home = () => {
   const featureRef = useRef();
@@ -22,28 +22,7 @@ const Home = () => {
 
   return (
     <div>
-      {/* Hero Section */}
-      <div className="hero-section">
-        <Fade direction="left" triggerOnce>
-          <img src={HeroImage} alt="Hero" className="hero-image" />
-        </Fade>
-        <div className="hero-content">
-          <Fade direction="up" triggerOnce delay={300}>
-            <h1>Welcome to My Project</h1>
-          </Fade>
-          <Fade direction="up" triggerOnce delay={500}>
-            <p>Discover amazing features and content.</p>
-          </Fade>
-          <Fade direction="up" triggerOnce delay={700}>
-            <button className="sbutton">Get Started</button>
-          </Fade>
-        </div>
-        <div className="overlay-text">
-          <Fade direction="right" triggerOnce delay={300}>
-            "Sometimes Our Only Choice Is To Walk Away From Everything We Know" - Jin Sakai
-          </Fade>
-        </div>
-      </div>
+     <HeroSection />
 
       {/* Bento Grid */}
       <div>
