@@ -35,14 +35,14 @@
 
 .overlay-text {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 24px;
+  font-size:64px;
   font-family: "Chewy", system-ui;
-  font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.5);
+  /* font-weight: bold; */
+  /* background-color: rgba(255, 255, 255, 0.053); */
   padding: 20px;
   border-radius: 8px;
   max-width: 80%;

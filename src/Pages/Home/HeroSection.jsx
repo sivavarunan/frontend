@@ -5,12 +5,12 @@ import HeroImage from './hero.png';
 const HeroSection = () => {
   return (
     <div className="hero-section">
-      <Fade direction="left" triggerOnce>
+      <Fade direction="down" triggerOnce>
         <img src={HeroImage} alt="Hero" className="hero-image" />
       </Fade>
       
       <div className="overlay-text">
-        <Fade direction="right" triggerOnce delay={300}>
+        <Fade direction="up" triggerOnce delay={100}>
           "Sometimes Our Only Choice Is To Walk Away From Everything We Know" - Jin Sakai
         </Fade>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Study.css';  
-import BentoGrid from '../Home/BentoGrid/BentoGrid';
+
 
 // import img1 from './Images/img1.jpg';
 // import img2 from './Images/img2.jpg';
