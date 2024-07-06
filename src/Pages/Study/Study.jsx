@@ -4,6 +4,7 @@ import image1 from './Images/img1.jpg';
 import image2 from './Images/img2.jpg';
 import image3 from './Images/img3.jpg';
 import image4 from './Images/img4.jpg';
+import { Fade } from 'react-awesome-reveal';
 
 const sections = [
   {
@@ -28,6 +29,7 @@ const Study = () => {
   return (
     <div className="study-container">
       {sections.map((section, index) => (
+        <Fade direction="up" triggerOnce delay={400}>
         <div 
           key={index} 
           className={`study-section ${index % 2 === 0 ? 'left' : 'right'}`}
@@ -35,6 +37,7 @@ const Study = () => {
           <div className="study-text">{section.text}</div>
           <img src={section.image} alt="Study section" className="study-image" />
         </div>
+        </Fade>
       ))}
     </div>
   );
