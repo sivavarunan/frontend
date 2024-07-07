@@ -96,7 +96,7 @@ const Home = () => {
       </div>
 
       {/* Second Hero Section */}
-      <div className="hero-section-2">
+      <div className="hero-section">
         <Fade direction="right" triggerOnce>
           <img src={HeroImage1} alt="Hero" className="hero-image" />
         </Fade>
