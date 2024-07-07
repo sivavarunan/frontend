@@ -15,9 +15,9 @@ const Footer = () => {
         <div className="footer">
             <nav className="footer-menu">
                 <Link to="/" className="footer-button" onClick={scrollToTop}>Home</Link>
-                <button className="footer-button">About Us</button>
+                <Link to="/about" className="footer-button" onClick={scrollToTop}>About</Link>
                 <button className="footer-button">Services</button>
-                <Link to="/contact" className="footer-button">Contact</Link>
+                <Link to="/contact" className="footer-button" onClick={scrollToTop}>Contact</Link>
                 <button className="footer-button">Privacy Policy</button>
             </nav>
             <div className="social-media">
