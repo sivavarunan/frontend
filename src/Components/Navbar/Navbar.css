@@ -5,18 +5,17 @@
 :root {
     --background-color: #ffffff;
     --text-color: #000000;
-    --navbar-bg: #f0f0f0;
+    --navbar-bg: rgba(255, 255, 255, 0.4); /* Light theme transparent background */
     --navbar-text-color: #000000;
     --button-bg-hover: #cccccc;
     --button-text-hover: #000000;
     --link-hover-color: #fd8888;
-    --navbar-background-image: url(./bg2.jpg);
 }
 
 [data-theme="dark"] {
     --background-color: #333333;
     --text-color: #ffffff;
-    --navbar-bg: #1a1a1a;
+    --navbar-bg: rgba(0, 0, 0, 0.4); /* Dark theme transparent background */
     --navbar-text-color: #ffffff;
     --button-bg-hover: #555555;
     --button-text-hover: #f7b4b4;
@@ -29,36 +28,36 @@ body {
     overflow-x: hidden;
     background-color: var(--background-color);
     color: var(--text-color);
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 button {
-    border: 0;
+    border: none;
     padding: 0;
     font-family: inherit;
     background: transparent;
     color: inherit;
+    cursor: pointer;
 }
 
 .navbar {
-    position: relative;
-    z-index: 1;
-    top: 0;
-    left: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
     background: var(--navbar-bg);
     color: var(--navbar-text-color);
-    font-family: 'Poppins';
     background-image: var(--navbar-background-image);
     background-size: cover;
-    background-position: center; 
-    position: relative; 
+    background-position: center;
+    z-index: 1;
+    position: relative;
 }
 
 .navbar-title {
     text-align: center;
+    margin: 0;
 }
 
 .navbar-menu {
@@ -66,26 +65,23 @@ button {
     justify-content: center;
     gap: 15px;
     padding: 9px 0;
+    flex-direction: row;
 }
 
 .navbar-menu > button {
     color: var(--navbar-text-color);
-    text-decoration: none;
     padding: 9px;
     transition: all 0.3s ease;
     border-radius: 10px;
 }
 
 .navbar-menu > button:hover {
-    color: var(--button-text-hover);
-    border-radius: 10px;
     background-color: var(--button-bg-hover);
+    color: var(--button-text-hover);
 }
 
 .navbar-menu > button.active {
-    color: var(--navbar-text-color);
     background-color: rgba(83, 83, 83, 0.207);
-    transition: all 0.3s ease;
 }
 
 .link-style {
@@ -104,26 +100,22 @@ button {
     border: 1px solid rgb(108, 107, 107);
     color: var(--navbar-text-color);
     font-size: 17px;
-    cursor: pointer;
-    transition: color 0.3s;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color 0.3s;
+    margin-top: 10px;
 }
 
 .theme-toggle-button:hover {
     color: var(--link-hover-color);
 }
 
-@media only screen and (min-width: 600px) {
+@media (min-width: 600px) {
     .navbar {
         padding: 16px;
-    }
-
-    .navbar-menu {
-        flex-direction: row;
     }
 }

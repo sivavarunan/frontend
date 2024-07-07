@@ -9,7 +9,7 @@
     --footer-social-icon-hover-bg: #242424;
     --footer-social-icon-color: #000000;
     --footer-social-icon-hover-color: #fd8888;
-    --footer-background-image: url(./bg2.jpg);
+    --footer-bg-color: rgba(255, 255, 255, 0.4); 
 }
 
 [data-theme="dark"] {
@@ -22,6 +22,7 @@
     --footer-social-icon-color: #ffffff;
     --footer-social-icon-hover-color: #fd8888;
     --footer-background-image: none;
+    --footer-bg-color: rgba(0, 0, 0, 0.4); 
 }
 
 .footer {

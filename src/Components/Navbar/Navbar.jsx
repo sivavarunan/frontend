@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import './Navbar.css';
 import { Link, useLocation } from 'react-router-dom';
 import { FiSun, FiMoon } from 'react-icons/fi';
+import './Navbar.css';
 
 const Navbar = ({ toggleTheme, theme }) => {
-    const [menu, setMenu] = useState("closed");
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const location = useLocation();
 
@@ -18,37 +17,21 @@ const Navbar = ({ toggleTheme, theme }) => {
         return null;
     }
 
-    const handleMenuClick = (menuName) => {
-        setMenu(menuName);
-    };
-
     return (
-        <div className={`navbar ${menu}`}>
+        <div className="navbar">
             <h1 className="navbar-title">
-                <Link to='/' className="link-style" onClick={() => handleMenuClick("Home")}>PROJECT</Link>
+                <Link to='/' className="link-style">PROJECT</Link>
             </h1>
 
-            <nav className={`navbar-menu ${menu}`}>
-                <button className={menu === "community" ? "active" : ""} onClick={() => handleMenuClick("community")}>
-                    <Link to='/community' className="link-style">Community</Link>
-                </button>
-                <button className={menu === "study" ? "active" : ""} onClick={() => handleMenuClick("study")}>
-                    <Link to='/study' className="link-style">Study</Link>
-                </button>
-                <button className={menu === "store" ? "active" : ""} onClick={() => handleMenuClick("store")}>
-                    <Link to='/store' className="link-style">Store</Link>
-                </button>
-                <button className={menu === "about" ? "active" : ""} onClick={() => handleMenuClick("about")}>
-                    <Link to='/about' className="link-style">About</Link>
-                </button>
+            <nav className="navbar-menu">
+                <Link to='/community' className={`link-style ${location.pathname === '/community' ? 'active' : ''}`}>Community</Link>
+                <Link to='/study' className={`link-style ${location.pathname === '/study' ? 'active' : ''}`}>Study</Link>
+                <Link to='/store' className={`link-style ${location.pathname === '/store' ? 'active' : ''}`}>Store</Link>
+                <Link to='/about' className={`link-style ${location.pathname === '/about' ? 'active' : ''}`}>About</Link>
                 {isLoggedIn ? (
-                    <button className={menu === "usersettings" ? "active" : ""} onClick={() => handleMenuClick("usersettings")}>
-                        <Link to='/user' className="link-style">User Settings</Link>
-                    </button>
+                    <Link to='/user' className={`link-style ${location.pathname === '/user' ? 'active' : ''}`}>User Settings</Link>
                 ) : (
-                    <button className={menu === "loginsignup" ? "active" : "loginsignup"} onClick={() => handleMenuClick("loginsignup")}>
-                        <Link to='/loginsignup' className="link-style">Login</Link>
-                    </button>
+                    <Link to='/loginsignup' className={`link-style ${location.pathname === '/loginsignup' ? 'active' : ''}`}>Login</Link>
                 )}
                 <button onClick={toggleTheme} className="theme-toggle-button">
                     {theme === 'dark' ? <FiSun /> : <FiMoon />}
