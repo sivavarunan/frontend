@@ -5,19 +5,19 @@
 :root {
     --background-color: #ffffff;
     --text-color: #000000;
-    --navbar-bg: rgba(255, 255, 255, 0.4); /* Light theme transparent background */
+    --navbar-bg: rgba(255, 255, 255, 0.4); 
     --navbar-text-color: #000000;
-    --button-bg-hover: #cccccc;
+    --button-bg-hover: #000000;
     --button-text-hover: #000000;
     --link-hover-color: #fd8888;
 }
 
 [data-theme="dark"] {
-    --background-color: #333333;
+    --background-color: #222222;
     --text-color: #ffffff;
-    --navbar-bg: rgba(0, 0, 0, 0.4); /* Dark theme transparent background */
+    --navbar-bg: rgba(0, 0, 0, 0.4); 
     --navbar-text-color: #ffffff;
-    --button-bg-hover: #555555;
+    --button-bg-hover: #000000;
     --button-text-hover: #f7b4b4;
     --link-hover-color: #fd8888;
     --navbar-background-image: none;
@@ -40,6 +40,7 @@ button {
     color: inherit;
     cursor: pointer;
 }
+
 
 .navbar {
     width: 100%;
@@ -70,7 +71,6 @@ button {
 
 .navbar-menu > button {
     color: var(--navbar-text-color);
-    padding: 9px;
     transition: all 0.3s ease;
     border-radius: 10px;
 }
@@ -107,7 +107,6 @@ button {
     align-items: center;
     justify-content: center;
     transition: color 0.3s;
-    margin-top: 10px;
 }
 
 .theme-toggle-button:hover {
