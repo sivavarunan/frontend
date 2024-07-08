@@ -7,7 +7,7 @@
     --text-color: #000000;
     --navbar-bg: rgba(255, 255, 255, 0.4); 
     --navbar-text-color: #000000;
-    --button-bg-hover: #000000;
+    --button-bg-hover: #0000009a;
     --button-text-hover: #000000;
     --link-hover-color: #fd8888;
 }
@@ -17,10 +17,9 @@
     --text-color: #ffffff;
     --navbar-bg: rgba(0, 0, 0, 0.4); 
     --navbar-text-color: #ffffff;
-    --button-bg-hover: #000000;
+    --button-bg-hover: #ffffff83;
     --button-text-hover: #f7b4b4;
     --link-hover-color: #fd8888;
-    --navbar-background-image: none;
 }
 
 body {
@@ -40,7 +39,6 @@ button {
     color: inherit;
     cursor: pointer;
 }
-
 
 .navbar {
     width: 100%;
@@ -113,8 +111,58 @@ button {
     color: var(--link-hover-color);
 }
 
-@media (min-width: 600px) {
-    .navbar {
-        padding: 16px;
+.menu-toggle-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbar-overlay {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.navbar-overlay.open {
+    max-height: 400px; 
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.close-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+    }
+
+    .menu-toggle-button {
+        display: block;
     }
 }
