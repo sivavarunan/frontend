@@ -98,11 +98,11 @@ const Home = () => {
 
       {/* Second Hero Section */}
       <div className="hero-section">
-        <Fade direction="right" triggerOnce>
+        <Fade direction="up" triggerOnce>
           <img src={HeroImage1} alt="Hero" className="hero-image" />
         </Fade>
         <div className="overlay-text-2">
-          <Fade direction="left" triggerOnce delay={300}>
+          <Fade direction="up" triggerOnce delay={300}>
             The path to victory is paved with sacrifice and perseverance
           </Fade>
         </div>
