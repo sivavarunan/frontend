@@ -44,7 +44,7 @@ function PreLoader2() {
   }, []);
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "100vh" }}>
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "100vh", background: "none" }}>
       {!completed ? (
         <>
           {!loading ? (
@@ -55,18 +55,17 @@ function PreLoader2() {
         </>
       ) : (
         <>
-          <h1>Your Data</h1>
+
           <br />
           <h6 style={{ position: "absolute", right: "5rem", bottom: "0" }}>
             <a
               style={{ color: "white" }}
               href="https://lottiefiles.com/ijum4kzkmt"
             >
-              Earth Animation by Hanina Kahfi on LottieFiles
             </a>
             <br />
             <a style={{ color: "white" }} href="https://lottiefiles.com/darius">
-              Success Animation by Chris Gannon on LottieFiles
+              
             </a>
           </h6>
         </>
