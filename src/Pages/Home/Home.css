@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Chewy&display=swap');
 
-/* Hero Sections */
+
 .hero-section {
   position: relative;
   text-align: center;
@@ -39,14 +39,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size:34px;
+  font-size: 34px;
   font-family: "Chewy", system-ui;
-  /* background-color: rgba(255, 255, 255, 0.053); */
   padding: 20px;
   border-radius: 8px;
   max-width: 80%;
   text-align: center;
 }
+
 .overlay-text-2 {
   position: absolute; 
   top: 50%; 
@@ -61,22 +61,60 @@
   max-width: 90%; 
 }
 
-/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .overlay-text, .overlay-text-2 {
+    font-size: 28px;
+  }
+
+  .card-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 @media (max-width: 768px) {
-  .overlay-text {
-    font-size: 18px;
+  .overlay-text, .overlay-text-2 {
+    font-size: 1.0rem;
     padding: 15px;
+  }
+
+  .sbutton {
+    padding: 8px 16px;
+  }
+
+  .hero-image {
+    height: 300px;
+  }
+
+  .image-section {
+    height: 300px; 
   }
 }
 
 @media (max-width: 480px) {
-  .overlay-text {
-    font-size: 16px;
+  .overlay-text, .overlay-text-2 {
+    font-size: 0.6rem;
     padding: 10px;
+  }
+
+  .sbutton {
+    padding: 6px 12px;
+  }
+
+  .hero-image {
+    height: 200px;
+  }
+
+  .image-section {
+    height: 200px; 
   }
 }
 
-/* Cards Section */
 .card-section {
   display: flex;
   justify-content: center;
@@ -85,7 +123,6 @@
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Feature Section */
 .feature-section {
   display: flex;
   justify-content: center;
@@ -114,7 +151,6 @@
   margin-bottom: 10px;
 }
 
-/* Image Section */
 .image-section {
   position: relative;
   width: 100%;
