@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import HeroImage from './bg7.png'; 
-import Typewriter from 'react-typewriter-effect';
+
+const text = "Sometimes Our Only Choice Is To Walk Away From Everything We Know - Jin Sakai";
 
 const HeroSection = () => {
+  const [displayedText, setDisplayedText] = useState("");
+
+  useEffect(() => {
+    let currentText = "";
+    const intervalId = setInterval(() => {
+      if (currentText.length < text.length) {
+        currentText += text[currentText.length];
+        setDisplayedText(currentText);
+      } else {
+        clearInterval(intervalId);
+      }
+    }, 100); 
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <div className="hero-section">
       <Fade direction="down" triggerOnce>
@@ -12,15 +30,28 @@ const HeroSection = () => {
       
       <div className="overlay-text">
         <Fade direction="up" triggerOnce delay={100}>
-        <Typewriter
-            text="Sometimes Our Only Choice Is To Walk Away From Everything We Know - Jin Sakai"
-            typeSpeed={100}
-            startDelay={100}
-            cursorColor="white"
-          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="typewriter-text"
+          >
+            {displayedText.split("").map((char, index) => (
+              <span
+                key={index}
+                className="gradient-text"
+                style={{
+                  background: "linear-gradient(90deg, #ff8a00, #e52e71)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                {char}
+              </span>
+            ))}
+          </motion.div>
         </Fade>
       </div>
-      
     </div>
   );
 };
