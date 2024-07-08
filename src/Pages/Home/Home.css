@@ -38,7 +38,7 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #fd8888;
   font-size: 34px;
   font-family: "Chewy", system-ui;
   padding: 20px;
@@ -89,6 +89,10 @@
 
   .hero-image {
     height: auto;
+  }
+  .hero-image1 {
+    height: auto;
+    width: 100%;
   }
 
   .image-section {

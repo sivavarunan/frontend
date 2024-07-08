@@ -1,13 +1,13 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
-import HeroImage from './hero.png'; 
+import HeroImage from './bg7.png'; 
 import Typewriter from 'react-typewriter-effect';
 
 const HeroSection = () => {
   return (
     <div className="hero-section">
       <Fade direction="down" triggerOnce>
-        <img src={HeroImage} alt="Hero" className="hero-image" />
+        <img src={HeroImage} alt="Hero" className="hero-image1" />
       </Fade>
       
       <div className="overlay-text">

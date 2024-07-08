@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
-    --footer-bg-color: #333;
+    --footer-bg-color: rgba(255, 255, 255, 0.4); 
     --footer-text-color: #000000;
     --footer-button-bg-hover: #555;
     --footer-button-text-hover: #f7b4b4;
@@ -9,11 +9,11 @@
     --footer-social-icon-hover-bg: #242424;
     --footer-social-icon-color: #000000;
     --footer-social-icon-hover-color: #fd8888;
-    --footer-bg-color: rgba(255, 255, 255, 0.4); 
+    --footer-background-image: url('./bg9.png');
 }
 
 [data-theme="dark"] {
-    --footer-bg-color: #1a1a1a;
+    --footer-bg-color: rgba(0, 0, 0, 0.4); 
     --footer-text-color: #ffffff;
     --footer-button-bg-hover: #555;
     --footer-button-text-hover: #f7b4b4;
@@ -21,8 +21,7 @@
     --footer-social-icon-hover-bg: #242424;
     --footer-social-icon-color: #ffffff;
     --footer-social-icon-hover-color: #fd8888;
-    --footer-background-image: none;
-    --footer-bg-color: rgba(0, 0, 0, 0.4); 
+    --footer-background-image: url('./bg9.png'); 
 }
 
 .footer {
@@ -32,6 +31,7 @@
     text-align: center;
     background-image: var(--footer-background-image);
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     position: relative;
 }
@@ -97,7 +97,6 @@
 
 @media (max-width: 768px) {
     .footer-menu {
-        /* flex-direction:column; */
         align-items: center;
     }
 
