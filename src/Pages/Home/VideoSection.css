@@ -17,28 +17,36 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
   z-index: 1;
   font-size: 1.4rem;
   margin-bottom: 20px;
-  text-wrap: pretty;
+  white-space: nowrap; 
+  font-size: 2rem;
 }
+.gradient-text {
+  background: linear-gradient(135deg, #fd6f6f, #ffb677);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+
 
 @media (max-width: 1024px) {
   .overlay {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
   .overlay {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
   .overlay {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     padding: 10px;
   }
 }

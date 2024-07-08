@@ -151,6 +151,10 @@ button {
     left: 0;
     right: 0;
     background: var(--navbar-bg-overlay);
+    background-image: url(./bg5.png);
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
