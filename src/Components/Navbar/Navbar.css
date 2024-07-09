@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Permanent+Marker&display=swap');
 :root {
     --background-color: #ffffff;
     --text-color: #000000;
@@ -73,7 +73,7 @@ button {
 }
 
 .navbar-title {
-    font-family: "Playfair Display SC", serif;
+    font-family: "Permanent Marker", cursive;
     text-align: center;
     margin: 25px 0px 8px 0px;
     flex-grow: 1;
@@ -89,6 +89,8 @@ button {
     gap: 15px;
     padding: 9px 0;
     flex-direction: row;
+    font-family: "Playfair Display SC", serif;
+    font-size: large;
 
 }
 
@@ -165,6 +167,8 @@ button {
     transition: max-height 0.3s ease-in-out;
     overflow: hidden;
     max-height: 0;
+    font-family: "Playfair Display SC", serif;
+    font-size: large;
     
 }
 
