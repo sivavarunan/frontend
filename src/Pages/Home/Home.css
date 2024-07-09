@@ -18,20 +18,19 @@
 }
 
 .sbutton {
-  color: rgb(0, 0, 0);
+  color: #000000;
   padding: 10px 20px;
-  background-color: aliceblue;
-  border: 1px solid beige;
+  background: linear-gradient(135deg, #ff8e7aba, #285f66bb); 
   border-radius: 20px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease;
 }
 
 .sbutton:hover {
-  color: blueviolet;
-  background-color: blanchedalmond;
+  color: #ffffff; 
+  background: linear-gradient(135deg, #343434ac, #cccccca4); 
+  transform: scale(1.1);
 }
-
 
 .overlay-text {
   position: absolute;
