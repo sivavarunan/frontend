@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Permanent+Marker&display=swap');
 
 .about-container {
     padding: 90px;
-    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-image: url('./Images/hero4.png'); 
+    background-image: url('./Images/hero4.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 8px;
-    max-width: 831px; 
+    max-width: 831px;
     margin: 50px auto;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-size: 20px;
 }
 
 .about-container h1,
@@ -23,6 +26,9 @@
 }
 
 .about-container p {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-size: 20px;
     margin-bottom: 16px;
     text-align: justify;
 }
