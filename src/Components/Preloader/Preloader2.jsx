@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Lottie from "react-lottie";
 
-import * as location from "./earth.json";
+import * as location from "./loading.json";
 import * as success from "./success.json";
 
 const defaultOptions1 = {

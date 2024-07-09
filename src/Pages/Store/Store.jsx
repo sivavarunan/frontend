@@ -8,6 +8,7 @@ import image1 from './Images/brush.jpg';
 import image2 from './Images/lipstick.jpg';
 import image3 from './Images/color.jpg';
 import image4 from './Images/qutex.jpg';
+import imgbg from './Images/bg1.jpg'
 import SearchBar from './SearchBar';
 import ImageSlider from './ImageSlider';
 import { Fade } from 'react-awesome-reveal';
@@ -111,6 +112,11 @@ const Store = () => {
             <Product key={product.id} product={product} addToCart={addToCart} removeFromCart={removeFromCart} />
           ))}
         </div>
+      </div>
+      <div className='bigScreen'>
+        <img src={imgbg}></img>
+        <h1>big screen</h1>
+
       </div>
       {cartOpen && !showPaymentForm && (
         <Cart cartItems={cartItems} total={total} checkout={checkout} toggleCart={toggleCart} />

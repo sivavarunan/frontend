@@ -4,12 +4,11 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: var(--background-color); 
   }
   
   .preloader-spinner {
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid #3cd241;
+    border: 16px solid #37c1f4;
+    border-top: 16px solid #06caf6;
     border-radius: 50%;
     width: 120px;
     height: 120px;
