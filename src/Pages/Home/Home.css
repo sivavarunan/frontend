@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 .hero-section {
   position: relative;
@@ -16,18 +18,28 @@
   position:relative;
   text-align: center;
 }
+.section h1{
+  font-family: "Playfair Display SC", serif;
+  font-size: 32px;
+}
+.section p{
+  font-family: "Bad Script", cursive;
+  font-size: 24px;
+}
 
 .sbutton {
-  color: #000000;
+  font-family: "Chewy", system-ui;
+  color: #b2e6ef;
+  font-size: 22px;
   padding: 10px 20px;
   background: linear-gradient(135deg, #ff8e7aba, #285f66bb); 
-  border-radius: 20px;
+  border-radius: 26px;
   cursor: pointer;
   transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease;
 }
 
 .sbutton:hover {
-  color: #ffffff; 
+  color: #ff4b4b; 
   background: linear-gradient(135deg, #343434ac, #cccccca4); 
   transform: scale(1.1);
 }
@@ -61,7 +73,6 @@
   top: 50%; 
   left: 50%; 
   transform: translate(-50%, -50%); 
-  color: white;
   font-size: 34px;
   font-family: "Chewy", system-ui;
   padding: 20px;
@@ -88,7 +99,7 @@
 
 @media (max-width: 768px) {
   .overlay-text, .overlay-text-2 {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 15px;
   }
 
