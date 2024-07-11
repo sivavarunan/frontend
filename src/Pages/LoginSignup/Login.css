@@ -1,5 +1,5 @@
 :root {
-  --background-color: #ffffff;
+  /* --background-color: #ffffff; */
   --text-color: #000000;
   --input-bg: #f0f0f0;
   --input-text-color: #000000;
@@ -11,7 +11,7 @@
 }
 
 [data-theme="dark"] {
-  --background-color: #000000;
+  /* --background-color: #000000; */
   --text-color: #ffffff;
   --input-bg: #555555;
   --input-text-color: #ffffff;
@@ -26,7 +26,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
-  background: var(--background-gradient);
+  /* background: var(--background-gradient); */
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
 }

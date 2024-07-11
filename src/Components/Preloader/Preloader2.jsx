@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Lottie from "react-lottie";
+import './Preloader2.css';
 
 import * as location from "./loading.json";
 import * as success from "./success.json";
