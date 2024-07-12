@@ -8,10 +8,8 @@ import image1 from './Images/brush.jpg';
 import image2 from './Images/lipstick.jpg';
 import image3 from './Images/color.jpg';
 import image4 from './Images/qutex.jpg';
-import imgbg from './Images/bg1.jpg'
+import imgbg from './Images/bg1.jpg';
 import SearchBar from './SearchBar';
-// import ImageSlider from './ImageSlider';
-import { Fade } from 'react-awesome-reveal';
 import Section2 from './section-2';
 
 const stripePromise = loadStripe('YOUR_STRIPE_PUBLIC_KEY');
@@ -29,35 +27,31 @@ const Product = ({ product, addToCart, removeFromCart }) => {
   const isAddedToCart = !!product.cartQuantity;
 
   return (
-    <Fade triggerOnce>
-      <div className="product">
-        <img src={product.image} alt={product.name} className="product-image" />
-        <div className="product-details">
-          <h3>{product.name}</h3>
-          <p>Rs {product.priceLKR}</p>
-          {!isAddedToCart && <button className="add-to-cart" onClick={() => addToCart(product)}>Add to Cart</button>}
-          {isAddedToCart && <button className="remove-from-cart" onClick={() => removeFromCart(product)}>Remove from Cart</button>}
-        </div>
+    <div className="product">
+      <img src={product.image} alt={product.name} className="product-image" />
+      <div className="product-details">
+        <h3>{product.name}</h3>
+        <p>Rs {product.priceLKR}</p>
+        {!isAddedToCart && <button className="add-to-cart" onClick={() => addToCart(product)}>Add to Cart</button>}
+        {isAddedToCart && <button className="remove-from-cart" onClick={() => removeFromCart(product)}>Remove from Cart</button>}
       </div>
-    </Fade>
+    </div>
   );
 };
 
 const Cart = ({ cartItems, total, checkout, toggleCart }) => {
   return (
-    <Fade triggerOnce>
-      <div className="cart">
-        <button className="close-cart" onClick={toggleCart}><FaTimes /></button>
-        <h2>Cart</h2>
-        <ul>
-          {cartItems.map(item => (
-            <li key={item.id}>{item.name} - Rs {item.cartQuantity * item.priceLKR}</li>
-          ))}
-        </ul>
-        <p>Total: Rs {total}</p>
-        <button className="checkout" onClick={checkout}>Checkout</button>
-      </div>
-    </Fade>
+    <div className="cart">
+      <button className="close-cart" onClick={toggleCart}><FaTimes /></button>
+      <h2>Cart</h2>
+      <ul>
+        {cartItems.map(item => (
+          <li key={item.id}>{item.name} - Rs {item.cartQuantity * item.priceLKR}</li>
+        ))}
+      </ul>
+      <p>Total: Rs {total}</p>
+      <button className="checkout" onClick={checkout}>Checkout</button>
+    </div>
   );
 };
 
@@ -106,9 +100,8 @@ const Store = () => {
         {cartItems.length > 0 && <span className="cart-count">{cartItems.length}</span>}
       </button>
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      {/* <ImageSlider /> */}
-      <div>
-      <Section2/>
+      <div className='section2'>
+        <Section2/>
       </div>
       <div className='store'>
         <div className="products">
@@ -118,9 +111,8 @@ const Store = () => {
         </div>
       </div>
       <div className='bigScreen'>
-        <img src={imgbg}></img>
+        <img src={imgbg} alt="background"/>
         <h1>big screen</h1>
-
       </div>
       {cartOpen && !showPaymentForm && (
         <Cart cartItems={cartItems} total={total} checkout={checkout} toggleCart={toggleCart} />

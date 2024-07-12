@@ -354,3 +354,17 @@
   font-size: 3rem; 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+.section2 {
+  right: 20px;
+  width: 100%;
+  /* overflow: hidden; */
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.section2-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+}

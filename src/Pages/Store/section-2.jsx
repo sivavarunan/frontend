@@ -12,34 +12,50 @@ const images = [
 ];
 
 const Slider = () => {
-  const [slides, setSlides] = useState(images);
-
-  const rotate = () => {
-    const lastChild = slides[slides.length - 1];
-    const newSlides = [lastChild, ...slides.slice(0, slides.length - 1)];
-    setSlides(newSlides);
-  };
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      rotate();
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, [slides]);
+  }, []);
 
   return (
     <div className="container">
       <div className="slider">
-        {slides.map((src, index) => (
+        {images.map((src, index) => (
           <div
             key={index}
-            className={`box${index + 1} ${index === 0 ? 'firstSlide' : ''}`}
+            className={`box ${getBoxClass(index, currentIndex)}`}
             style={{ backgroundImage: `url(${src})` }}
           ></div>
         ))}
       </div>
     </div>
   );
+};
+
+const getBoxClass = (index, currentIndex) => {
+  const position = (index - currentIndex + images.length) % images.length;
+  switch (position) {
+    case 0:
+      return 'box1 firstSlide';
+    case 1:
+      return 'box2';
+    case 2:
+      return 'box3';
+    case 3:
+      return 'box4';
+    case 4:
+      return 'box5';
+    case 5:
+      return 'box6';
+    case 6:
+      return 'box7';
+    default:
+      return '';
+  }
 };
 
 export default Slider;
