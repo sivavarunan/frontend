@@ -16,6 +16,8 @@ import ImageCarousel from './imagecamel';
 import BentoGrid from './BentoGrid/BentoGrid';
 import { Fade } from 'react-awesome-reveal';
 import HeroSection from './HeroSection';
+import Section2 from './section-2';
+
 
 const Home = () => {
   const featureRef = useRef();
@@ -46,6 +48,9 @@ const Home = () => {
       </Fade>
       </div>
 
+      <Fade cascade direction="up" triggerOnce>
+      <Section2 />
+      </Fade>
       
       {/* Cards Section */}
         <Fade cascade direction="up" triggerOnce>

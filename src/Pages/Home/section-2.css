@@ -1,0 +1,85 @@
+.container1 {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slider {
+    height: 750px;
+    width: 100vw;
+    display: flex;
+    perspective: 1000px;
+    position: relative;
+    align-items: center;
+  }
+  
+  .boxs {
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    position: absolute;
+  }
+  
+  .firstSlide {
+    animation: firstChild 1s;
+  }
+  
+  @keyframes firstChild {
+    0% {
+      left: 100%;
+      transform: scale(0.2) translate(-50%, -50%);
+    }
+    100% {
+      left: -13%;
+      transform: scale(0.2) translate(-50%, -50%);
+    }
+  }
+  
+  .box1 { left: -13%; }
+  .box2 { left: -5%; }
+  .box3 { left: 10%; }
+  .box4 { left: 50%; }
+  .box5 { left: 71%; }
+  .box6 { left: 85%; }
+  .box7 { left: 100%; }
+  
+  .box1,
+  .box7 {
+    width: 100vh;
+    height: 60vh;
+    transform: scale(0.2) translate(-50%, -50%);
+    top: 10%;
+    z-index: 1;
+  }
+  
+  .box2,
+  .box6 {
+    width: 100vh;
+    height: 60vh;
+    transform: scale(0.4) translate(-50%, -50%);
+    top: 20%;
+    z-index: 2;
+  }
+  
+  .box3,
+  .box5 {
+    width: 100vh;
+    height: 60vh;
+    transform: scale(0.6) translate(-50%, -50%);
+    top: 30%;
+    z-index: 3;
+  }
+  
+  .box4 {
+    width: 60vw;
+    height: 60vh;
+    border-color: #c92026;
+    color: #fff;
+    transform: scale(1) translate(-50%, -50%);
+    top: 50%;
+    z-index: 4;
+  }
+  
