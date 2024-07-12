@@ -10,8 +10,9 @@ import image3 from './Images/color.jpg';
 import image4 from './Images/qutex.jpg';
 import imgbg from './Images/bg1.jpg'
 import SearchBar from './SearchBar';
-import ImageSlider from './ImageSlider';
+// import ImageSlider from './ImageSlider';
 import { Fade } from 'react-awesome-reveal';
+import Section2 from './section-2';
 
 const stripePromise = loadStripe('YOUR_STRIPE_PUBLIC_KEY');
 
@@ -105,7 +106,10 @@ const Store = () => {
         {cartItems.length > 0 && <span className="cart-count">{cartItems.length}</span>}
       </button>
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <ImageSlider />
+      {/* <ImageSlider /> */}
+      <div>
+      <Section2/>
+      </div>
       <div className='store'>
         <div className="products">
           {filteredProducts.map(product => (

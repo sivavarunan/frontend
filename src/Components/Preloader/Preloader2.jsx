@@ -4,7 +4,7 @@ import './Preloader2.css';
 
 import * as location from "./loading.json";
 import * as success from "./success.json";
-import * as background from "./bg.json"; // Import the background Lottie file
+import * as background from "./bg.json";
 
 const defaultOptions1 = {
   loop: true,
