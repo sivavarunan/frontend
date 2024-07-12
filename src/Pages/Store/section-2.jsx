@@ -22,12 +22,12 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container1">
       <div className="slider">
         {images.map((src, index) => (
           <div
             key={index}
-            className={`box ${getBoxClass(index, currentIndex)}`}
+            className={`boxs ${getBoxClass(index, currentIndex)}`}
             style={{ backgroundImage: `url(${src})` }}
           ></div>
         ))}
