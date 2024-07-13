@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import Card from './card';
-// import HeroImage1 from './hero1.png';
 import HeroImage1 from './hero2.png';
 import tree from './tree.jpg';
 import river from './river.jpg';

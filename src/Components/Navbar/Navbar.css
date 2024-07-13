@@ -57,7 +57,7 @@ button {
     background-position: center;
     z-index: 1;
     position: relative;
-    background-image: url(./rose.png);
+    /* background-image: url(./rose.png); */
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
