@@ -10,7 +10,7 @@ import image3 from './Images/color.jpg';
 import image4 from './Images/qutex.jpg';
 import imgbg from './Images/bg1.jpg';
 import SearchBar from './SearchBar';
-import Section2 from './section-2';
+// import Section2 from './section-2';
 
 const stripePromise = loadStripe('YOUR_STRIPE_PUBLIC_KEY');
 
@@ -101,7 +101,7 @@ const Store = () => {
       </button>
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className='section2'>
-        <Section2/>
+        {/* <Section2/> */}
       </div>
       <div className='store'>
         <div className="products">
