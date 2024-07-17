@@ -355,24 +355,8 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.section2 {
-  right: 20px;
-  width: 100%;
-  /* overflow: hidden; */
-  position: relative;
-  margin-bottom: 20px;
-}
 
-.section2-container1 {
-  width: 100%;
-  height: auto;
-  position: relative;
-}
 
 .section3{
- margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  position: relative;
-
+  margin: 3% 0%;
 }

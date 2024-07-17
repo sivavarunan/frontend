@@ -52,13 +52,13 @@ const Home = () => {
       </Fade>
       
       {/* Cards Section */}
-        <Fade cascade direction="up" triggerOnce>
+        {/* <Fade cascade direction="up" triggerOnce>
           <div className="card-container">
             <Card title="Card 1" className="card1" description="This is the first card." images={[mc1, mc2]} />
             <Card title="Card 2" className="card2" description="This is the second card." images={[tree, river]} />
             <Card title="Card 3" className="card3" description="This is the third card." images={[aw1, aw2]} />
           </div>
-        </Fade>
+        </Fade> */}
 
       {/* Video Section */}
       <div>

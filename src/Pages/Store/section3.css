@@ -1,10 +1,12 @@
 
 .containerx {
   position: relative;
-  width: auto;
+  width: 1200px;
   height: 700px;
   background: transparent;
   box-shadow: 0 30px 50px #dbdbdb39;
+  transform: translate(6%, 0);
+
 }
 
 .containerx .slide .item {
@@ -19,7 +21,7 @@
   background-size: cover;
   display: inline-block;
   transition: 0.5s;
-  color: #ffbdbd;
+  /* color: #ffbdbd; */
 }
 
 .slide .item:nth-child(1),
@@ -110,14 +112,13 @@
 }
 
 .button button {
-  width: 40px;
-  height: 35px;
-  border-radius: 8px;
-  border: none;
+  width: 33px;
+  height: 33px;
+  border-radius: 10px;
   cursor: pointer;
   margin: 0 5px;
-  border: 1px solid #000;
   transition: 0.3s;
+  background-color:rgba(98, 255, 255, 0.467);
 }
 
 .button button:hover {

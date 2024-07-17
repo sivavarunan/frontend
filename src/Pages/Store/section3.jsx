@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import './section3.css';
 
 const Section3 = () => {
@@ -60,10 +61,10 @@ const Section3 = () => {
       </div>
       <div className="button">
         <button className="prev" onClick={handlePrevClick}>
-          <i className="fa-solid fa-arrow-left"></i>
+          <FaArrowLeft />
         </button>
         <button className="next" onClick={handleNextClick}>
-          <i className="fa-solid fa-arrow-right"></i>
+          <FaArrowRight />
         </button>
       </div>
     </div>
