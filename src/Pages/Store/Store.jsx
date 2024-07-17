@@ -102,6 +102,9 @@ const Store = () => {
         {cartItems.length > 0 && <span className="cart-count">{cartItems.length}</span>}
       </button>
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <div className='section3'>
+        <Section3 />
+      </div>
       <div className='section2'>
         {/* <Section2/> */}
       </div>
@@ -116,9 +119,6 @@ const Store = () => {
         <img src={imgbg} alt="background"/>
         <h1>big screen</h1>
       </div> */}
-      <div className='section3'>
-        <Section3 />
-      </div>
       {cartOpen && !showPaymentForm && (
         <Cart cartItems={cartItems} total={total} checkout={checkout} toggleCart={toggleCart} />
       )}

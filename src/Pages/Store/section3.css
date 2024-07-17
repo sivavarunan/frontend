@@ -1,8 +1,8 @@
 
 .containerx {
   position: relative;
-  width: 1000px;
-  height: 600px;
+  width: auto;
+  height: 700px;
   background: transparent;
   box-shadow: 0 30px 50px #dbdbdb39;
 }
@@ -12,13 +12,14 @@
   height: 300px;
   position: absolute;
   top: 50%;
-  transform: translate(0, -50%);
+  transform: translate(30%, -50%);
   border-radius: 20px;
   box-shadow: 0 30px 50px #50505028;
   background-position: 50% 50%;
   background-size: cover;
   display: inline-block;
   transition: 0.5s;
+  color: #ffbdbd;
 }
 
 .slide .item:nth-child(1),
