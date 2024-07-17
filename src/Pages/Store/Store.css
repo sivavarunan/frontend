@@ -368,3 +368,11 @@
   height: auto;
   position: relative;
 }
+
+.section3{
+ margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+
+}

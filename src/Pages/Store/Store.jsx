@@ -112,11 +112,11 @@ const Store = () => {
           ))}
         </div>
       </div>
-      <div className='bigScreen'>
+      {/* <div className='bigScreen'>
         <img src={imgbg} alt="background"/>
         <h1>big screen</h1>
-      </div>
-      <div>
+      </div> */}
+      <div className='section3'>
         <Section3 />
       </div>
       {cartOpen && !showPaymentForm && (
