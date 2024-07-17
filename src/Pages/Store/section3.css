@@ -1,0 +1,18 @@
+
+.section3 {
+    padding: 20px;
+    margin: 20px 0; 
+  }
+  
+  .section3-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .section3-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
