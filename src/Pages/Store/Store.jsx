@@ -10,6 +10,8 @@ import image3 from './Images/color.jpg';
 import image4 from './Images/qutex.jpg';
 import imgbg from './Images/bg1.jpg';
 import SearchBar from './SearchBar';
+import Section3 from './section3';
+
 // import Section2 from './section-2';
 
 const stripePromise = loadStripe('YOUR_STRIPE_PUBLIC_KEY');
@@ -113,6 +115,9 @@ const Store = () => {
       <div className='bigScreen'>
         <img src={imgbg} alt="background"/>
         <h1>big screen</h1>
+      </div>
+      <div>
+        <Section3 />
       </div>
       {cartOpen && !showPaymentForm && (
         <Cart cartItems={cartItems} total={total} checkout={checkout} toggleCart={toggleCart} />
