@@ -1,4 +1,4 @@
-// useOnScreen.js
+
 import { useState, useEffect } from 'react';
 
 const useOnScreen = (ref, rootMargin = '0px') => {

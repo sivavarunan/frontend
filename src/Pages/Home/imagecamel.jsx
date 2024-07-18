@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './ImageCarousel.css';
-import HeroImage from './hero.png';
-import HeroImage1 from './hero1.png';
-import mc1 from './mc1.png';
-import mc2 from './mc2.png';
-import aw1 from './aw1.png';
-import aw2 from './aw2.png';
+import HeroImage from './Images/hero.png';
+import HeroImage1 from './Images/hero1.png';
+import mc1 from './Images/mc1.png';
+import mc2 from './Images/mc2.png';
+import aw1 from './Images/aw1.png';
+import aw2 from './Images/aw2.png';
 
 const images = [
   aw1,

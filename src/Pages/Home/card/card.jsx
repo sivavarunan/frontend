@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageSlider from './ImageSlider';
+import ImageSlider from '../ImageSlider';
 import './CardComponent.css';
 
 const Card = ({ title, description, images }) => {

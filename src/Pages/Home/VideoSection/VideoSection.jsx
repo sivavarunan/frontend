@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './VideoSection.css'; 
-import animation from './videoes/animation.mp4';
+import animation from '../videoes/animation.mp4';
 import { Fade } from 'react-awesome-reveal';
 
 const text = "The World is What We Imagine.. Enjoy every moment of it.";

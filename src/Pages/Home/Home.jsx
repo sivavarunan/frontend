@@ -1,14 +1,14 @@
 import React, { useRef } from 'react';
-import HeroImage1 from './hero2.png';
+import HeroImage1 from './Images/hero2.png';
 import './Home.css';
 import { FaCogs, FaUsers, FaMobile } from 'react-icons/fa';
-import VideoSection from './VideoSection';
+import VideoSection from './VideoSection/VideoSection';
 import useOnScreen from './UseOnScreen';
 import ImageCarousel from './imagecamel';
 import BentoGrid from './BentoGrid/BentoGrid';
 import { Fade } from 'react-awesome-reveal';
-import HeroSection from './HeroSection';
-import Section2 from './section-2';
+import HeroSection from './HeroSection/HeroSection';
+import Section2 from './Section-2/section-2';
 
 
 const Home = () => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
-import HeroImage from './bg7.png'; 
+import HeroImage from '../Images/bg7.png'; 
 
 const text = "Sometimes Our Only Choice Is To Walk Away From Everything We Know - Jin Sakai";
 
