@@ -1,12 +1,5 @@
 import React, { useRef } from 'react';
-import Card from './card';
 import HeroImage1 from './hero2.png';
-import tree from './tree.jpg';
-import river from './river.jpg';
-import mc1 from './mc1.png';
-import mc2 from './mc2.png';
-import aw1 from './aw1.png';
-import aw2 from './aw2.png';
 import './Home.css';
 import { FaCogs, FaUsers, FaMobile } from 'react-icons/fa';
 import VideoSection from './VideoSection';
