@@ -16,7 +16,7 @@ const Section3 = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       handleNextClick();
-    }, 6000); // Change image every 6 seconds
+    }, 4000); // Change image every 4 seconds
 
     return () => clearInterval(interval); // Cleanup the interval on component unmount
   }, []);
