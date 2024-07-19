@@ -1,9 +1,8 @@
-
 .user-settings {
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.099);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -17,6 +16,7 @@
 .user-details {
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .avatar {
@@ -31,7 +31,7 @@
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 40px;
-  border: 2px solid black;
+  border: 2px solid #333;
 }
 
 .info {
@@ -41,6 +41,7 @@
 .info p {
   font-size: 18px;
   margin-bottom: 10px;
+  color: #555;
 }
 
 .info p strong {
@@ -48,18 +49,60 @@
 }
 
 .logout-button {
-  background-color: rgb(49, 15, 15);
+  background-color: #310f0f;
   border-radius: 16px;
   cursor: pointer;
   padding: 8px 16px;
   margin-top: 20px;
+  color: #fff;
   transition: background-color 0.3s ease;
+  border: none;
 }
 
 .logout-button:hover {
   background-color: red;
 }
 
+.update-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.update-form div {
+  margin-bottom: 10px;
+}
+
+.update-form label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.update-form input[type="text"],
+.update-form input[type="email"],
+.update-form input[type="file"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.update-form button[type="submit"] {
+  background-color: #310f0f;
+  border-radius: 16px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 10px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.update-form button[type="submit"]:hover {
+  background-color: #5a1c1c;
+}
 
 @media (max-width: 600px) {
   .user-details {

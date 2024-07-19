@@ -5,13 +5,15 @@ import { FaUserCircle } from 'react-icons/fa';
 
 const UserSettings = () => {
   const [user, setUser] = useState(null);
-  const navigate = useNavigate(); 
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [avatar, setAvatar] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
         const token = localStorage.getItem('token');
-        console.log('Token:', token);
         if (!token) {
           return;
         }
@@ -26,6 +28,8 @@ const UserSettings = () => {
         });
         const userData = await response.json();
         setUser(userData.data);
+        setUsername(userData.data.username);
+        setEmail(userData.data.email);
       } catch (error) {
         console.error('Error fetching user details:', error);
       }
@@ -34,13 +38,53 @@ const UserSettings = () => {
     fetchUserDetails();
   }, []);
 
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/loginsignup');
+  };
+
+  const handleAvatarChange = (e) => {
+    setAvatar(e.target.files[0]);
+  };
+
+  const handleUpdate = async (e) => {
+    e.preventDefault();
+    try {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('username', username);
+      formData.append('email', email);
+      if (avatar) {
+        formData.append('avatar', avatar);
+      }
+
+      const response = await fetch('http://localhost:8080/api/user/update', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+        },
+        body: formData,
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setUser(result.data);
+        alert('User details updated successfully!');
+      } else {
+        alert('Error updating user details');
+      }
+    } catch (error) {
+      console.error('Error updating user details:', error);
+    }
+  };
+
   if (!user) {
     return <div>Loading...</div>;
   }
-  const handleLogout = () => {
-    localStorage.removeItem('token'); 
-    navigate('/loginsignup');
-  };
 
   return (
     <div className="user-settings">
@@ -59,6 +103,36 @@ const UserSettings = () => {
           <button className="logout-button" onClick={handleLogout}>Logout</button>
         </div>
       </div>
+      <form className="update-form" onSubmit={handleUpdate}>
+        <div>
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="avatar">Avatar:</label>
+          <input
+            type="file"
+            id="avatar"
+            accept="image/*"
+            onChange={handleAvatarChange}
+          />
+        </div>
+        <button type="submit">Update</button>
+      </form>
     </div>
   );
 };
