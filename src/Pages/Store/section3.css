@@ -1,4 +1,6 @@
-/* Base styles */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalnia+Glaze:wght@100..700&display=swap');
+
+
 .containerx {
   position: relative;
   width: 1200px;
@@ -6,6 +8,7 @@
   box-shadow: 0 30px 50px #00a2ff2b;
   transform: translate(6%, 0);
   border-radius: 20px;
+
 }
 
 .containerx .slide .item {
@@ -44,7 +47,6 @@
   left: calc(50% + 440px);
 }
 
-/* here n = 0, 1, 2, 3,... */
 .slide .item:nth-child(n + 6) {
   left: calc(50% + 660px);
   opacity: 0;
@@ -57,7 +59,8 @@
   width: 300px;
   text-align: left;
   transform: translate(0, -50%);
-  font-family: system-ui;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
   display: none;
 }
 
