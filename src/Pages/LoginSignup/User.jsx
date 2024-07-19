@@ -5,7 +5,7 @@ import { FaUserCircle } from 'react-icons/fa';
 
 const UserSettings = () => {
   const [user, setUser] = useState(null);
-  const navigate = useNavigate(); // Hook to use navigation
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchUserDetails = async () => {
@@ -38,8 +38,8 @@ const UserSettings = () => {
     return <div>Loading...</div>;
   }
   const handleLogout = () => {
-    localStorage.removeItem('token'); // Remove token from local storage
-    navigate('/loginsignup'); // Redirect to login page
+    localStorage.removeItem('token'); 
+    navigate('/loginsignup');
   };
 
   return (
@@ -50,7 +50,7 @@ const UserSettings = () => {
           {user.avatarUrl ? (
             <img src={user.avatarUrl} alt="User Avatar" />
           ) : (
-            <FaUserCircle size={80} color="#ddd" /> // Default icon
+            <FaUserCircle size={80} color="#ddd" />
           )}
         </div>
         <div className="info">
