@@ -61,6 +61,21 @@
 .logout-button:hover {
   background-color: red;
 }
+.delete-button {
+  margin-left: 10px;
+  background-color: #c25754;
+  border-radius: 16px;
+  cursor: pointer;
+  padding: 8px 16px;
+  margin-top: 10px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.delete-button:hover {
+  background-color: #ff0800;
+}
 
 .update-form {
   display: flex;

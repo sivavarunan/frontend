@@ -92,6 +92,33 @@ const UserSettings = () => {
     }
   };
 
+  const handleDeleteAccount = async () => {
+    try {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        return;
+      }
+
+      const response = await fetch('http://localhost:8080/api/user/delete', {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        localStorage.removeItem('token');
+        navigate('/loginsignup');
+      } else {
+        alert('Error deleting account');
+      }
+    } catch (error) {
+      console.error('Error deleting account:', error);
+    }
+  };
+
   if (!user) {
     return <div>Loading...</div>;
   }
@@ -113,6 +140,7 @@ const UserSettings = () => {
           <p><strong>Username:</strong> {user.username}</p>
           <p><strong>Email:</strong> {user.email}</p>
           <button className="logout-button" onClick={handleLogout}>Logout</button>
+          <button className="delete-button" onClick={handleDeleteAccount}>Delete Account</button>
         </div>
       </div>
       <form className="update-form" onSubmit={handleUpdate}>
