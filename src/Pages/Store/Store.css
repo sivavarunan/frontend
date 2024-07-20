@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalnia+Glaze:wght@100..700&display=swap');
+
 .App {
-  font-family: "Kalnia Glaze", serif;
   padding: 20px;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  
 }
 
 .search-bar {

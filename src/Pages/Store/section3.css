@@ -128,9 +128,7 @@
   background-color: #944f4f;
 }
 
-/* Media queries for responsiveness */
 
-/* For tablets */
 @media (max-width: 1024px) {
   .containerx {
     width: 90%;

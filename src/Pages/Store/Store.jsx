@@ -8,10 +8,8 @@ import image1 from './Images/brush.jpg';
 import image2 from './Images/lipstick.jpg';
 import image3 from './Images/color.jpg';
 import image4 from './Images/qutex.jpg';
-import imgbg from './Images/bg1.jpg';
 import SearchBar from './SearchBar';
 import Section3 from './section3';
-
 
 const stripePromise = loadStripe('YOUR_STRIPE_PUBLIC_KEY');
 
@@ -117,7 +115,7 @@ const Store = () => {
       {showPaymentForm && (
         <div className="payment-section">
           <Elements stripe={stripePromise}>
-            <PaymentForm checkout={checkout} />
+            <PaymentForm />
           </Elements>
         </div>
       )}
