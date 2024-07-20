@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './User.css';
 import { useNavigate } from 'react-router-dom';
-import { FaUserCircle } from 'react-icons/fa'; 
+import { FaUserCircle } from 'react-icons/fa';
 
 const UserSettings = () => {
   const [user, setUser] = useState(null);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [avatar, setAvatar] = useState(null);
+  const [avatarPreview, setAvatarPreview] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -44,7 +45,16 @@ const UserSettings = () => {
   };
 
   const handleAvatarChange = (e) => {
-    setAvatar(e.target.files[0]);
+    const file = e.target.files[0];
+    setAvatar(file);
+
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setAvatarPreview(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   const handleUpdate = async (e) => {
@@ -91,7 +101,9 @@ const UserSettings = () => {
       <h2>User Settings</h2>
       <div className="user-details">
         <div className="avatar">
-          {user.avatarUrl ? (
+          {avatarPreview ? (
+            <img src={avatarPreview} alt="Avatar Preview" />
+          ) : user.avatarUrl ? (
             <img src={user.avatarUrl} alt="User Avatar" />
           ) : (
             <FaUserCircle size={80} color="#ddd" />

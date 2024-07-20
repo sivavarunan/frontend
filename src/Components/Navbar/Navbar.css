@@ -57,7 +57,6 @@ button {
     background-position: center;
     z-index: 1;
     position: relative;
-    /* background-image: url(./rose.png); */
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -81,6 +80,7 @@ button {
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
+    
 }
 
 .navbar-menu {
@@ -90,7 +90,6 @@ button {
     padding: 9px 0;
     flex-direction: row;
     font-family: "Playfair Display SC", serif;
-    font-size: large;
 
 }
 
@@ -98,6 +97,7 @@ button {
     color: var(--navbar-text-color);
     transition: all 0.3s ease;
     border-radius: 10px;
+    font-size:20px;
 }
 
 .navbar-menu > button:hover {
@@ -151,16 +151,17 @@ button {
 
 .navbar-overlay {
     position: absolute;
+    height: 100vh;
     top: 100%;
     left: 0;
     right: 0;
     background: var(--navbar-bg-overlay);
-    background-image: url(./bg5.png);
+    /* background-image: url(./bg5.png); */
     background-position:center ;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -173,7 +174,7 @@ button {
 }
 
 .navbar-overlay.open {
-    max-height: 600px; 
+    max-height: 100vh; 
 }
 
 .overlay-content {
@@ -186,6 +187,7 @@ button {
 
 .overlay-content .link-style:hover {
     color: var(--link-hover-color);
+    background-color: #8f8f8f;
 }
 
 .overlay-content .link-style {
@@ -193,10 +195,10 @@ button {
     text-decoration: none;
     padding: 20px;
     transition: all 0.3s;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
-.close-overlay {
+/* .close-overlay {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -204,7 +206,7 @@ button {
     border: none;
     font-size: 24px;
     cursor: pointer;
-}
+} */
 
 @media (max-width: 768px) {
     .navbar-menu {

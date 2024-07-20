@@ -65,7 +65,7 @@ const Navbar = ({ toggleTheme, theme }) => {
 
             <div className={`navbar-overlay ${menu}`}>
                 <div className="overlay-content">
-                    <button className="close-overlay" onClick={toggleOverlay}>×</button>
+                    {/* <button className="close-overlay" onClick={toggleOverlay}>×</button> */}
                     <Link to='/community' className="link-style" onClick={() => handleMenuClick("community")}>Community</Link>
                     <Link to='/study' className="link-style" onClick={() => handleMenuClick("study")}>Study</Link>
                     <Link to='/store' className="link-style" onClick={() => handleMenuClick("store")}>Store</Link>
