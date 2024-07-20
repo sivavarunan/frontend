@@ -38,14 +38,21 @@ const Product = ({ product, addToCart, removeFromCart }) => {
   );
 };
 
-const Cart = ({ cartItems, total, checkout, toggleCart }) => {
+const Cart = ({ cartItems, total, checkout, toggleCart, incrementItem, decrementItem }) => {
   return (
     <div className="cart">
       <button className="close-cart" onClick={toggleCart}><FaTimes /></button>
       <h2>Cart</h2>
       <ul>
         {cartItems.map(item => (
-          <li key={item.id}>{item.name} - Rs {item.cartQuantity * item.priceLKR}</li>
+          <li key={item.id}>
+            {item.name} - Rs {item.cartQuantity * item.priceLKR}
+            <div className="quantity-controls">
+              <button onClick={() => decrementItem(item)}>-</button>
+              <span>{item.cartQuantity}</span>
+              <button onClick={() => incrementItem(item)}>+</button>
+            </div>
+          </li>
         ))}
       </ul>
       <p>Total: Rs {total}</p>
@@ -82,6 +89,14 @@ const Store = () => {
     }
   };
 
+  const incrementItem = (item) => {
+    setCartItems(cartItems.map(cartItem => cartItem.id === item.id ? { ...cartItem, cartQuantity: cartItem.cartQuantity + 1 } : cartItem));
+  };
+
+  const decrementItem = (item) => {
+    setCartItems(cartItems.map(cartItem => cartItem.id === item.id ? { ...cartItem, cartQuantity: cartItem.cartQuantity - 1 } : cartItem));
+  };
+
   const filteredProducts = products.filter(product =>
     product.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -110,12 +125,19 @@ const Store = () => {
         </div>
       </div>
       {cartOpen && !showPaymentForm && (
-        <Cart cartItems={cartItems} total={total} checkout={checkout} toggleCart={toggleCart} />
+        <Cart 
+          cartItems={cartItems} 
+          total={total} 
+          checkout={checkout} 
+          toggleCart={toggleCart} 
+          incrementItem={incrementItem} 
+          decrementItem={decrementItem} 
+        />
       )}
       {showPaymentForm && (
         <div className="payment-section">
           <Elements stripe={stripePromise}>
-            <PaymentForm />
+            <PaymentForm checkout={checkout} />
           </Elements>
         </div>
       )}

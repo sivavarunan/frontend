@@ -148,6 +148,7 @@
   transform: translateZ(-50px) translate(60px, 60px); 
 }
 
+
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -191,6 +192,32 @@
   background-color: rgba(128, 147, 255, 0.488);
   color: #218838;
 
+}
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.quantity-controls button {
+  background-color: #5feaff89;
+  border: none;
+  padding: 4px 8px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #000000;
+  font-size: 18px;
+}
+
+.quantity-controls button:hover {
+  background-color: rgba(128, 147, 255, 0.488);
+  color: #218838;
+}
+
+.quantity-controls span {
+  font-size: 16px;
+  margin: 0 5px;
 }
 
 .cart {
