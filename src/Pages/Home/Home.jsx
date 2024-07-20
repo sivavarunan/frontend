@@ -27,7 +27,9 @@ const Home = () => {
           <p>Discover amazing features and content.</p>
         </Fade>
         <Fade direction="up" triggerOnce delay={700}>
-          <button className="sbutton">Get Started</button>
+        <div className="sbutton-button-container">
+        <span data-title="Get Started"><button className="sbutton">Get Started</button></span>
+      </div>
         </Fade>
       </div>
       </div>
