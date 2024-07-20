@@ -94,7 +94,8 @@ const Store = () => {
   };
 
   const decrementItem = (item) => {
-    setCartItems(cartItems.map(cartItem => cartItem.id === item.id ? { ...cartItem, cartQuantity: cartItem.cartQuantity - 1 } : cartItem));
+    setCartItems(cartItems.map(cartItem => cartItem.id === item.id ? { ...cartItem, cartQuantity: cartItem.cartQuantity - 1 } : cartItem)
+      .filter(cartItem => cartItem.cartQuantity > 0));
   };
 
   const filteredProducts = products.filter(product =>
