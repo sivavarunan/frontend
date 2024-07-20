@@ -200,19 +200,19 @@
 }
 
 .quantity-controls button {
-  background-color: #5feaff89;
+  background-color: #ffffffdf;
   border: none;
-  padding: 4px 8px;
-  margin: 0 5px;
+  padding: 5px 12px;
+  margin: 0 10px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 50%;
   color: #000000;
   font-size: 18px;
 }
 
 .quantity-controls button:hover {
-  background-color: rgba(128, 147, 255, 0.488);
-  color: #218838;
+  background-color: rgb(75, 102, 255);
+  color: #ffffff;
 }
 
 .quantity-controls span {

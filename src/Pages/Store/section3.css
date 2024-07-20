@@ -8,6 +8,7 @@
   box-shadow: 0 30px 50px #00a2ff2b;
   transform: translate(6%, 0);
   border-radius: 20px;
+  color: aliceblue;
 
 }
 
@@ -156,7 +157,6 @@
   }
 }
 
-/* For mobile devices */
 @media (max-width: 768px) {
   .containerx {
     width: 100%;
