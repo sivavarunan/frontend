@@ -102,13 +102,8 @@
 .typewriter-text {
   font-size: 2rem;
   line-height: 1.5;
-  /* font-weight: bold; */
 }
 
-.gradient-text {
-  /* display: inline-block; */
-
-}
 
 
 .overlay-text-2 {
@@ -199,14 +194,8 @@
   display: flex;
   justify-content: center;
   padding: 40px;
-  opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.feature-section.animate {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .feature {

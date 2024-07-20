@@ -3,7 +3,7 @@ import HeroImage1 from './Images/hero2.png';
 import './Home.css';
 import { FaCogs, FaUsers, FaMobile } from 'react-icons/fa';
 import VideoSection from './VideoSection/VideoSection';
-import useOnScreen from './UseOnScreen';
+// import useOnScreen from './UseOnScreen';
 import ImageCarousel from './imagecamel';
 import BentoGrid from './BentoGrid/BentoGrid';
 import { Fade } from 'react-awesome-reveal';
@@ -13,7 +13,7 @@ import Section2 from './Section-2/section-2';
 
 const Home = () => {
   const featureRef = useRef();
-  const isVisible = useOnScreen(featureRef, '50px');
+  // const isVisible = useOnScreen(featureRef, '50px');
 
   return (
     <div>
@@ -71,7 +71,7 @@ const Home = () => {
 
 
       {/* Feature Section */}
-      <div ref={featureRef} className={`feature-section ${isVisible ? 'animate' : ''}`}>
+      <div ref={featureRef} className={`feature-section `}>
         <Fade cascade direction="up" triggerOnce>
           <div className="feature">
             <FaCogs size={36} />
