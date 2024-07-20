@@ -38,9 +38,9 @@ const Product = ({ product, addToCart, removeFromCart }) => {
   );
 };
 
-const Cart = ({ cartItems, total, checkout, toggleCart, incrementItem, decrementItem }) => {
+const Cart = ({ cartItems, total, checkout, toggleCart, incrementItem, decrementItem, isCartOpen }) => {
   return (
-    <div className="cart">
+    <div className={`cart ${isCartOpen ? 'open' : ''}`}>
       <button className="close-cart" onClick={toggleCart}><FaTimes /></button>
       <h2>Cart</h2>
       <ul>
@@ -62,13 +62,13 @@ const Cart = ({ cartItems, total, checkout, toggleCart, incrementItem, decrement
 };
 
 const Store = () => {
-  const [cartOpen, setCartOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [showPaymentForm, setShowPaymentForm] = useState(false);
 
   const toggleCart = () => {
-    setCartOpen(!cartOpen);
+    setIsCartOpen(!isCartOpen);
   };
 
   const addToCart = (product) => {
@@ -109,7 +109,7 @@ const Store = () => {
   const total = cartItems.reduce((sum, item) => sum + (item.priceUSD * item.cartQuantity * conversionRate), 0).toFixed(2);
 
   return (
-    <div className={`App ${cartOpen ? 'dark-mode' : ''}`}>
+    <div className={`App ${isCartOpen ? 'dark-mode' : ''}`}>
       <button className="cart-button" onClick={toggleCart}>
         <FaShoppingCart />
         {cartItems.length > 0 && <span className="cart-count">{cartItems.length}</span>}
@@ -125,7 +125,7 @@ const Store = () => {
           ))}
         </div>
       </div>
-      {cartOpen && !showPaymentForm && (
+      {isCartOpen && !showPaymentForm && (
         <Cart 
           cartItems={cartItems} 
           total={total} 
@@ -133,6 +133,7 @@ const Store = () => {
           toggleCart={toggleCart} 
           incrementItem={incrementItem} 
           decrementItem={decrementItem} 
+          isCartOpen={isCartOpen}
         />
       )}
       {showPaymentForm && (

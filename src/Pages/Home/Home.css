@@ -87,6 +87,10 @@
   .overlay-text, .overlay-text-2 {
     font-size: 28px;
   }
+  .hero-image {
+    width: auto;
+    height: 400px;
+  }
 
   .card-section {
     flex-direction: column;
@@ -110,7 +114,8 @@
   }
 
   .hero-image {
-    height: auto;
+    width: auto;
+    height: 400px;
   }
   .hero-image1 {
     height: auto;
